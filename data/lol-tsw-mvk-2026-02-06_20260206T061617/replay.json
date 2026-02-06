@@ -1,0 +1,3738 @@
+{
+  "meta": {
+    "question": "LoL: Team Secret Whales vs MVK Esports (BO3) - LCP Regular Season",
+    "slug": "lol-tsw-mvk-2026-02-06",
+    "sport_type": "moneyline",
+    "poll_interval": 5.0,
+    "outcomes": [
+      "Team Secret Whales",
+      "MVK Esports"
+    ],
+    "outcome_start_prices": [
+      "0.66",
+      "0.34"
+    ]
+  },
+  "frames": [
+    {
+      "ts": "2026-02-06 06:16:24Z",
+      "best_bid_p": 0.63,
+      "best_bid_sz": 176.67,
+      "best_ask_p": 0.7,
+      "best_ask_sz": 100.0,
+      "spread": 0.07,
+      "volume": 0.0,
+      "trades": 0,
+      "depth_bid_1c": 423.67,
+      "depth_ask_1c": 100.0,
+      "depth_bid_5c": 533.67,
+      "depth_ask_5c": 110.0,
+      "depth_bid_10c": 533.67,
+      "depth_ask_10c": 840.0,
+      "depth_bid_15c": 533.67,
+      "depth_ask_15c": 1700.0,
+      "bids": [
+        {
+          "price": 0.63,
+          "size": 176.67
+        },
+        {
+          "price": 0.62,
+          "size": 247.0
+        },
+        {
+          "price": 0.61,
+          "size": 100.0
+        },
+        {
+          "price": 0.58,
+          "size": 10.0
+        },
+        {
+          "price": 0.15,
+          "size": 200.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.7,
+          "size": 100.0
+        },
+        {
+          "price": 0.73,
+          "size": 10.0
+        },
+        {
+          "price": 0.76,
+          "size": 110.0
+        },
+        {
+          "price": 0.77,
+          "size": 560.0
+        },
+        {
+          "price": 0.78,
+          "size": 60.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:16:29Z",
+      "best_bid_p": 0.63,
+      "best_bid_sz": 176.67,
+      "best_ask_p": 0.7,
+      "best_ask_sz": 100.0,
+      "spread": 0.07,
+      "volume": 0.0,
+      "trades": 0,
+      "depth_bid_1c": 423.67,
+      "depth_ask_1c": 100.0,
+      "depth_bid_5c": 833.67,
+      "depth_ask_5c": 139.0,
+      "depth_bid_10c": 833.67,
+      "depth_ask_10c": 809.0,
+      "depth_bid_15c": 833.67,
+      "depth_ask_15c": 1659.0,
+      "bids": [
+        {
+          "price": 0.63,
+          "size": 176.67
+        },
+        {
+          "price": 0.62,
+          "size": 247.0
+        },
+        {
+          "price": 0.61,
+          "size": 400.0
+        },
+        {
+          "price": 0.58,
+          "size": 10.0
+        },
+        {
+          "price": 0.15,
+          "size": 100.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.7,
+          "size": 100.0
+        },
+        {
+          "price": 0.73,
+          "size": 10.0
+        },
+        {
+          "price": 0.75,
+          "size": 29.0
+        },
+        {
+          "price": 0.76,
+          "size": 110.0
+        },
+        {
+          "price": 0.77,
+          "size": 510.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:16:34Z",
+      "best_bid_p": 0.63,
+      "best_bid_sz": 176.67,
+      "best_ask_p": 0.69,
+      "best_ask_sz": 222.52,
+      "spread": 0.06,
+      "volume": 1.42857,
+      "trades": 1,
+      "depth_bid_1c": 423.67,
+      "depth_ask_1c": 321.09,
+      "depth_bid_5c": 833.67,
+      "depth_ask_5c": 631.09,
+      "depth_bid_10c": 1143.67,
+      "depth_ask_10c": 1370.09,
+      "depth_bid_15c": 1143.67,
+      "depth_ask_15c": 1470.09,
+      "bids": [
+        {
+          "price": 0.63,
+          "size": 176.67
+        },
+        {
+          "price": 0.62,
+          "size": 247.0
+        },
+        {
+          "price": 0.61,
+          "size": 400.0
+        },
+        {
+          "price": 0.58,
+          "size": 10.0
+        },
+        {
+          "price": 0.56,
+          "size": 10.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.69,
+          "size": 222.52
+        },
+        {
+          "price": 0.7,
+          "size": 98.57
+        },
+        {
+          "price": 0.73,
+          "size": 310.0
+        },
+        {
+          "price": 0.75,
+          "size": 69.0
+        },
+        {
+          "price": 0.76,
+          "size": 110.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:16:39Z",
+      "best_bid_p": 0.63,
+      "best_bid_sz": 205.67,
+      "best_ask_p": 0.68,
+      "best_ask_sz": 30.0,
+      "spread": 0.05,
+      "volume": 0.0,
+      "trades": 0,
+      "depth_bid_1c": 323.67,
+      "depth_ask_1c": 281.52,
+      "depth_bid_5c": 533.67,
+      "depth_ask_5c": 690.09,
+      "depth_bid_10c": 843.67,
+      "depth_ask_10c": 1370.09,
+      "depth_bid_15c": 843.67,
+      "depth_ask_15c": 1370.09,
+      "bids": [
+        {
+          "price": 0.63,
+          "size": 205.67
+        },
+        {
+          "price": 0.62,
+          "size": 118.0
+        },
+        {
+          "price": 0.61,
+          "size": 200.0
+        },
+        {
+          "price": 0.58,
+          "size": 10.0
+        },
+        {
+          "price": 0.56,
+          "size": 10.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.68,
+          "size": 30.0
+        },
+        {
+          "price": 0.69,
+          "size": 251.52
+        },
+        {
+          "price": 0.7,
+          "size": 98.57
+        },
+        {
+          "price": 0.72,
+          "size": 10.0
+        },
+        {
+          "price": 0.73,
+          "size": 300.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:16:44Z",
+      "best_bid_p": 0.63,
+      "best_bid_sz": 205.67,
+      "best_ask_p": 0.68,
+      "best_ask_sz": 30.0,
+      "spread": 0.05,
+      "volume": 0.0,
+      "trades": 0,
+      "depth_bid_1c": 323.67,
+      "depth_ask_1c": 281.52,
+      "depth_bid_5c": 833.67,
+      "depth_ask_5c": 890.09,
+      "depth_bid_10c": 1143.67,
+      "depth_ask_10c": 1620.09,
+      "depth_bid_15c": 1143.67,
+      "depth_ask_15c": 1620.09,
+      "bids": [
+        {
+          "price": 0.63,
+          "size": 205.67
+        },
+        {
+          "price": 0.62,
+          "size": 118.0
+        },
+        {
+          "price": 0.61,
+          "size": 500.0
+        },
+        {
+          "price": 0.58,
+          "size": 10.0
+        },
+        {
+          "price": 0.56,
+          "size": 10.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.68,
+          "size": 30.0
+        },
+        {
+          "price": 0.69,
+          "size": 251.52
+        },
+        {
+          "price": 0.7,
+          "size": 98.57
+        },
+        {
+          "price": 0.71,
+          "size": 500.0
+        },
+        {
+          "price": 0.72,
+          "size": 10.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:16:49Z",
+      "best_bid_p": 0.64,
+      "best_bid_sz": 30.0,
+      "best_ask_p": 0.69,
+      "best_ask_sz": 251.52,
+      "spread": 0.05,
+      "volume": 0.0,
+      "trades": 0,
+      "depth_bid_1c": 235.67,
+      "depth_ask_1c": 560.09,
+      "depth_bid_5c": 873.67,
+      "depth_ask_5c": 1220.09,
+      "depth_bid_10c": 1183.67,
+      "depth_ask_10c": 1840.09,
+      "depth_bid_15c": 1183.67,
+      "depth_ask_15c": 1940.09,
+      "bids": [
+        {
+          "price": 0.64,
+          "size": 30.0
+        },
+        {
+          "price": 0.63,
+          "size": 205.67
+        },
+        {
+          "price": 0.62,
+          "size": 118.0
+        },
+        {
+          "price": 0.61,
+          "size": 500.0
+        },
+        {
+          "price": 0.6,
+          "size": 10.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.69,
+          "size": 251.52
+        },
+        {
+          "price": 0.7,
+          "size": 308.57
+        },
+        {
+          "price": 0.71,
+          "size": 560.0
+        },
+        {
+          "price": 0.73,
+          "size": 100.0
+        },
+        {
+          "price": 0.75,
+          "size": 60.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:16:54Z",
+      "best_bid_p": 0.64,
+      "best_bid_sz": 40.0,
+      "best_ask_p": 0.68,
+      "best_ask_sz": 30.0,
+      "spread": 0.04,
+      "volume": 0.0,
+      "trades": 0,
+      "depth_bid_1c": 245.67,
+      "depth_ask_1c": 311.52,
+      "depth_bid_5c": 573.67,
+      "depth_ask_5c": 1330.09,
+      "depth_bid_10c": 883.67,
+      "depth_ask_10c": 1940.09,
+      "depth_bid_15c": 883.67,
+      "depth_ask_15c": 1940.09,
+      "bids": [
+        {
+          "price": 0.64,
+          "size": 40.0
+        },
+        {
+          "price": 0.63,
+          "size": 205.67
+        },
+        {
+          "price": 0.62,
+          "size": 218.0
+        },
+        {
+          "price": 0.61,
+          "size": 100.0
+        },
+        {
+          "price": 0.6,
+          "size": 10.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.68,
+          "size": 30.0
+        },
+        {
+          "price": 0.69,
+          "size": 281.52
+        },
+        {
+          "price": 0.7,
+          "size": 408.57
+        },
+        {
+          "price": 0.71,
+          "size": 500.0
+        },
+        {
+          "price": 0.72,
+          "size": 100.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:16:59Z",
+      "best_bid_p": 0.64,
+      "best_bid_sz": 40.0,
+      "best_ask_p": 0.68,
+      "best_ask_sz": 30.0,
+      "spread": 0.04,
+      "volume": 0.0,
+      "trades": 0,
+      "depth_bid_1c": 216.67,
+      "depth_ask_1c": 281.52,
+      "depth_bid_5c": 544.67,
+      "depth_ask_5c": 1325.09,
+      "depth_bid_10c": 854.67,
+      "depth_ask_10c": 1435.09,
+      "depth_bid_15c": 854.67,
+      "depth_ask_15c": 1435.09,
+      "bids": [
+        {
+          "price": 0.64,
+          "size": 40.0
+        },
+        {
+          "price": 0.63,
+          "size": 176.67
+        },
+        {
+          "price": 0.62,
+          "size": 218.0
+        },
+        {
+          "price": 0.61,
+          "size": 100.0
+        },
+        {
+          "price": 0.6,
+          "size": 10.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.68,
+          "size": 30.0
+        },
+        {
+          "price": 0.69,
+          "size": 251.52
+        },
+        {
+          "price": 0.7,
+          "size": 423.57
+        },
+        {
+          "price": 0.71,
+          "size": 500.0
+        },
+        {
+          "price": 0.72,
+          "size": 120.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:17:04Z",
+      "best_bid_p": 0.64,
+      "best_bid_sz": 40.0,
+      "best_ask_p": 0.68,
+      "best_ask_sz": 30.0,
+      "spread": 0.04,
+      "volume": 0.0,
+      "trades": 0,
+      "depth_bid_1c": 216.67,
+      "depth_ask_1c": 281.52,
+      "depth_bid_5c": 844.67,
+      "depth_ask_5c": 1015.09,
+      "depth_bid_10c": 1204.67,
+      "depth_ask_10c": 1225.09,
+      "depth_bid_15c": 1204.67,
+      "depth_ask_15c": 1225.09,
+      "bids": [
+        {
+          "price": 0.64,
+          "size": 40.0
+        },
+        {
+          "price": 0.63,
+          "size": 176.67
+        },
+        {
+          "price": 0.62,
+          "size": 418.0
+        },
+        {
+          "price": 0.61,
+          "size": 100.0
+        },
+        {
+          "price": 0.6,
+          "size": 110.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.68,
+          "size": 30.0
+        },
+        {
+          "price": 0.69,
+          "size": 251.52
+        },
+        {
+          "price": 0.7,
+          "size": 123.57
+        },
+        {
+          "price": 0.71,
+          "size": 500.0
+        },
+        {
+          "price": 0.72,
+          "size": 110.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:17:09Z",
+      "best_bid_p": 0.64,
+      "best_bid_sz": 40.0,
+      "best_ask_p": 0.67,
+      "best_ask_sz": 30.0,
+      "spread": 0.03,
+      "volume": 0.0,
+      "trades": 0,
+      "depth_bid_1c": 216.67,
+      "depth_ask_1c": 183.0,
+      "depth_bid_5c": 844.67,
+      "depth_ask_5c": 1358.09,
+      "depth_bid_10c": 1214.67,
+      "depth_ask_10c": 1528.09,
+      "depth_bid_15c": 1214.67,
+      "depth_ask_15c": 1578.09,
+      "bids": [
+        {
+          "price": 0.64,
+          "size": 40.0
+        },
+        {
+          "price": 0.63,
+          "size": 176.67
+        },
+        {
+          "price": 0.62,
+          "size": 418.0
+        },
+        {
+          "price": 0.61,
+          "size": 100.0
+        },
+        {
+          "price": 0.6,
+          "size": 110.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.67,
+          "size": 30.0
+        },
+        {
+          "price": 0.68,
+          "size": 153.0
+        },
+        {
+          "price": 0.69,
+          "size": 551.52
+        },
+        {
+          "price": 0.7,
+          "size": 108.57
+        },
+        {
+          "price": 0.71,
+          "size": 515.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:17:14Z",
+      "best_bid_p": 0.65,
+      "best_bid_sz": 190.05,
+      "best_ask_p": 0.67,
+      "best_ask_sz": 20.0,
+      "spread": 0.02,
+      "volume": 0.0,
+      "trades": 0,
+      "depth_bid_1c": 190.05,
+      "depth_ask_1c": 173.0,
+      "depth_bid_5c": 494.72,
+      "depth_ask_5c": 1348.09,
+      "depth_bid_10c": 974.72,
+      "depth_ask_10c": 1518.09,
+      "depth_bid_15c": 974.72,
+      "depth_ask_15c": 1578.09,
+      "bids": [
+        {
+          "price": 0.65,
+          "size": 190.05
+        },
+        {
+          "price": 0.63,
+          "size": 176.67
+        },
+        {
+          "price": 0.62,
+          "size": 118.0
+        },
+        {
+          "price": 0.6,
+          "size": 10.0
+        },
+        {
+          "price": 0.59,
+          "size": 110.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.67,
+          "size": 20.0
+        },
+        {
+          "price": 0.68,
+          "size": 153.0
+        },
+        {
+          "price": 0.69,
+          "size": 551.52
+        },
+        {
+          "price": 0.7,
+          "size": 108.57
+        },
+        {
+          "price": 0.71,
+          "size": 515.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:17:19Z",
+      "best_bid_p": 0.66,
+      "best_bid_sz": 30.0,
+      "best_ask_p": 0.67,
+      "best_ask_sz": 30.0,
+      "spread": 0.01,
+      "volume": 0.0,
+      "trades": 0,
+      "depth_bid_1c": 190.05,
+      "depth_ask_1c": 193.0,
+      "depth_bid_5c": 784.72,
+      "depth_ask_5c": 1313.09,
+      "depth_bid_10c": 854.72,
+      "depth_ask_10c": 1373.09,
+      "depth_bid_15c": 1154.72,
+      "depth_ask_15c": 1433.09,
+      "bids": [
+        {
+          "price": 0.66,
+          "size": 30.0
+        },
+        {
+          "price": 0.65,
+          "size": 160.05
+        },
+        {
+          "price": 0.63,
+          "size": 176.67
+        },
+        {
+          "price": 0.62,
+          "size": 318.0
+        },
+        {
+          "price": 0.61,
+          "size": 100.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.67,
+          "size": 30.0
+        },
+        {
+          "price": 0.68,
+          "size": 163.0
+        },
+        {
+          "price": 0.69,
+          "size": 321.52
+        },
+        {
+          "price": 0.7,
+          "size": 198.57
+        },
+        {
+          "price": 0.71,
+          "size": 600.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:17:24Z",
+      "best_bid_p": 0.65,
+      "best_bid_sz": 160.05,
+      "best_ask_p": 0.66,
+      "best_ask_sz": 10.0,
+      "spread": 0.01,
+      "volume": 0.0,
+      "trades": 0,
+      "depth_bid_1c": 160.05,
+      "depth_ask_1c": 40.0,
+      "depth_bid_5c": 864.72,
+      "depth_ask_5c": 1203.09,
+      "depth_bid_10c": 1274.72,
+      "depth_ask_10c": 1253.09,
+      "depth_bid_15c": 1274.72,
+      "depth_ask_15c": 1313.09,
+      "bids": [
+        {
+          "price": 0.65,
+          "size": 160.05
+        },
+        {
+          "price": 0.63,
+          "size": 176.67
+        },
+        {
+          "price": 0.62,
+          "size": 518.0
+        },
+        {
+          "price": 0.6,
+          "size": 10.0
+        },
+        {
+          "price": 0.57,
+          "size": 50.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.66,
+          "size": 10.0
+        },
+        {
+          "price": 0.67,
+          "size": 30.0
+        },
+        {
+          "price": 0.68,
+          "size": 133.0
+        },
+        {
+          "price": 0.69,
+          "size": 321.52
+        },
+        {
+          "price": 0.7,
+          "size": 198.57
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:17:29Z",
+      "best_bid_p": 0.65,
+      "best_bid_sz": 160.05,
+      "best_ask_p": 0.66,
+      "best_ask_sz": 2.42,
+      "spread": 0.01,
+      "volume": 7.575755,
+      "trades": 1,
+      "depth_bid_1c": 160.05,
+      "depth_ask_1c": 22.42,
+      "depth_bid_5c": 694.72,
+      "depth_ask_5c": 1330.51,
+      "depth_bid_10c": 1204.72,
+      "depth_ask_10c": 1480.51,
+      "depth_bid_15c": 1204.72,
+      "depth_ask_15c": 1540.51,
+      "bids": [
+        {
+          "price": 0.65,
+          "size": 160.05
+        },
+        {
+          "price": 0.63,
+          "size": 206.67
+        },
+        {
+          "price": 0.62,
+          "size": 118.0
+        },
+        {
+          "price": 0.61,
+          "size": 10.0
+        },
+        {
+          "price": 0.6,
+          "size": 200.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.66,
+          "size": 2.42
+        },
+        {
+          "price": 0.67,
+          "size": 20.0
+        },
+        {
+          "price": 0.68,
+          "size": 423.0
+        },
+        {
+          "price": 0.69,
+          "size": 261.52
+        },
+        {
+          "price": 0.7,
+          "size": 98.57
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:17:34Z",
+      "best_bid_p": 0.65,
+      "best_bid_sz": 160.05,
+      "best_ask_p": 0.66,
+      "best_ask_sz": 2.42,
+      "spread": 0.01,
+      "volume": 0.0,
+      "trades": 0,
+      "depth_bid_1c": 160.05,
+      "depth_ask_1c": 22.42,
+      "depth_bid_5c": 1094.72,
+      "depth_ask_5c": 1330.51,
+      "depth_bid_10c": 1504.72,
+      "depth_ask_10c": 1480.51,
+      "depth_bid_15c": 1504.72,
+      "depth_ask_15c": 1540.51,
+      "bids": [
+        {
+          "price": 0.65,
+          "size": 160.05
+        },
+        {
+          "price": 0.63,
+          "size": 206.67
+        },
+        {
+          "price": 0.62,
+          "size": 518.0
+        },
+        {
+          "price": 0.61,
+          "size": 10.0
+        },
+        {
+          "price": 0.6,
+          "size": 200.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.66,
+          "size": 2.42
+        },
+        {
+          "price": 0.67,
+          "size": 20.0
+        },
+        {
+          "price": 0.68,
+          "size": 423.0
+        },
+        {
+          "price": 0.69,
+          "size": 251.52
+        },
+        {
+          "price": 0.7,
+          "size": 108.57
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:17:39Z",
+      "best_bid_p": 0.65,
+      "best_bid_sz": 160.05,
+      "best_ask_p": 0.66,
+      "best_ask_sz": 12.42,
+      "spread": 0.01,
+      "volume": 0.0,
+      "trades": 0,
+      "depth_bid_1c": 160.05,
+      "depth_ask_1c": 32.42,
+      "depth_bid_5c": 1036.72,
+      "depth_ask_5c": 2085.51,
+      "depth_bid_10c": 1551.72,
+      "depth_ask_10c": 2252.51,
+      "depth_bid_15c": 1560.72,
+      "depth_ask_15c": 2350.51,
+      "bids": [
+        {
+          "price": 0.65,
+          "size": 160.05
+        },
+        {
+          "price": 0.63,
+          "size": 206.67
+        },
+        {
+          "price": 0.62,
+          "size": 400.0
+        },
+        {
+          "price": 0.61,
+          "size": 70.0
+        },
+        {
+          "price": 0.6,
+          "size": 200.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.66,
+          "size": 12.42
+        },
+        {
+          "price": 0.67,
+          "size": 20.0
+        },
+        {
+          "price": 0.68,
+          "size": 123.0
+        },
+        {
+          "price": 0.69,
+          "size": 1261.52
+        },
+        {
+          "price": 0.7,
+          "size": 158.57
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:17:44Z",
+      "best_bid_p": 0.65,
+      "best_bid_sz": 160.05,
+      "best_ask_p": 0.66,
+      "best_ask_sz": 12.42,
+      "spread": 0.01,
+      "volume": 0.0,
+      "trades": 0,
+      "depth_bid_1c": 160.05,
+      "depth_ask_1c": 232.42,
+      "depth_bid_5c": 836.72,
+      "depth_ask_5c": 2685.51,
+      "depth_bid_10c": 1251.72,
+      "depth_ask_10c": 2752.51,
+      "depth_bid_15c": 1260.72,
+      "depth_ask_15c": 2850.51,
+      "bids": [
+        {
+          "price": 0.65,
+          "size": 160.05
+        },
+        {
+          "price": 0.63,
+          "size": 206.67
+        },
+        {
+          "price": 0.62,
+          "size": 200.0
+        },
+        {
+          "price": 0.61,
+          "size": 70.0
+        },
+        {
+          "price": 0.6,
+          "size": 200.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.66,
+          "size": 12.42
+        },
+        {
+          "price": 0.67,
+          "size": 220.0
+        },
+        {
+          "price": 0.68,
+          "size": 483.0
+        },
+        {
+          "price": 0.69,
+          "size": 1361.52
+        },
+        {
+          "price": 0.7,
+          "size": 98.57
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:17:49Z",
+      "best_bid_p": 0.65,
+      "best_bid_sz": 190.05,
+      "best_ask_p": 0.66,
+      "best_ask_sz": 12.42,
+      "spread": 0.01,
+      "volume": 0.0,
+      "trades": 0,
+      "depth_bid_1c": 190.05,
+      "depth_ask_1c": 232.42,
+      "depth_bid_5c": 866.72,
+      "depth_ask_5c": 2685.51,
+      "depth_bid_10c": 1281.72,
+      "depth_ask_10c": 2752.51,
+      "depth_bid_15c": 1290.72,
+      "depth_ask_15c": 2850.51,
+      "bids": [
+        {
+          "price": 0.65,
+          "size": 190.05
+        },
+        {
+          "price": 0.63,
+          "size": 206.67
+        },
+        {
+          "price": 0.62,
+          "size": 200.0
+        },
+        {
+          "price": 0.61,
+          "size": 70.0
+        },
+        {
+          "price": 0.6,
+          "size": 200.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.66,
+          "size": 12.42
+        },
+        {
+          "price": 0.67,
+          "size": 220.0
+        },
+        {
+          "price": 0.68,
+          "size": 483.0
+        },
+        {
+          "price": 0.69,
+          "size": 1361.52
+        },
+        {
+          "price": 0.7,
+          "size": 98.57
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:17:54Z",
+      "best_bid_p": 0.65,
+      "best_bid_sz": 181.47,
+      "best_ask_p": 0.66,
+      "best_ask_sz": 2.42,
+      "spread": 0.01,
+      "volume": 8.571427,
+      "trades": 1,
+      "depth_bid_1c": 181.47,
+      "depth_ask_1c": 22.42,
+      "depth_bid_5c": 1158.14,
+      "depth_ask_5c": 1025.51,
+      "depth_bid_10c": 1573.14,
+      "depth_ask_10c": 1252.51,
+      "depth_bid_15c": 1582.14,
+      "depth_ask_15c": 1350.51,
+      "bids": [
+        {
+          "price": 0.65,
+          "size": 181.47
+        },
+        {
+          "price": 0.63,
+          "size": 206.67
+        },
+        {
+          "price": 0.62,
+          "size": 500.0
+        },
+        {
+          "price": 0.61,
+          "size": 70.0
+        },
+        {
+          "price": 0.6,
+          "size": 200.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.66,
+          "size": 2.42
+        },
+        {
+          "price": 0.67,
+          "size": 20.0
+        },
+        {
+          "price": 0.68,
+          "size": 123.0
+        },
+        {
+          "price": 0.69,
+          "size": 261.52
+        },
+        {
+          "price": 0.7,
+          "size": 108.57
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:17:59Z",
+      "best_bid_p": 0.65,
+      "best_bid_sz": 191.47,
+      "best_ask_p": 0.67,
+      "best_ask_sz": 27.9,
+      "spread": 0.02,
+      "volume": 4.51373,
+      "trades": 1,
+      "depth_bid_1c": 191.47,
+      "depth_ask_1c": 450.9,
+      "depth_bid_5c": 1168.14,
+      "depth_ask_5c": 1445.99,
+      "depth_bid_10c": 1573.14,
+      "depth_ask_10c": 1512.99,
+      "depth_bid_15c": 1582.14,
+      "depth_ask_15c": 1610.99,
+      "bids": [
+        {
+          "price": 0.65,
+          "size": 191.47
+        },
+        {
+          "price": 0.63,
+          "size": 206.67
+        },
+        {
+          "price": 0.62,
+          "size": 500.0
+        },
+        {
+          "price": 0.61,
+          "size": 70.0
+        },
+        {
+          "price": 0.6,
+          "size": 200.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.67,
+          "size": 27.9
+        },
+        {
+          "price": 0.68,
+          "size": 423.0
+        },
+        {
+          "price": 0.69,
+          "size": 261.52
+        },
+        {
+          "price": 0.7,
+          "size": 108.57
+        },
+        {
+          "price": 0.71,
+          "size": 510.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:18:04Z",
+      "best_bid_p": 0.66,
+      "best_bid_sz": 10.0,
+      "best_ask_p": 0.67,
+      "best_ask_sz": 27.9,
+      "spread": 0.01,
+      "volume": 0.0,
+      "trades": 0,
+      "depth_bid_1c": 161.47,
+      "depth_ask_1c": 1660.9,
+      "depth_bid_5c": 368.14,
+      "depth_ask_5c": 2590.99,
+      "depth_bid_10c": 638.14,
+      "depth_ask_10c": 2767.99,
+      "depth_bid_15c": 1112.14,
+      "depth_ask_15c": 2865.99,
+      "bids": [
+        {
+          "price": 0.66,
+          "size": 10.0
+        },
+        {
+          "price": 0.65,
+          "size": 151.47
+        },
+        {
+          "price": 0.63,
+          "size": 206.67
+        },
+        {
+          "price": 0.6,
+          "size": 210.0
+        },
+        {
+          "price": 0.57,
+          "size": 50.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.67,
+          "size": 27.9
+        },
+        {
+          "price": 0.68,
+          "size": 1633.0
+        },
+        {
+          "price": 0.69,
+          "size": 321.52
+        },
+        {
+          "price": 0.7,
+          "size": 108.57
+        },
+        {
+          "price": 0.71,
+          "size": 500.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:18:09Z",
+      "best_bid_p": 0.66,
+      "best_bid_sz": 10.0,
+      "best_ask_p": 0.67,
+      "best_ask_sz": 17.9,
+      "spread": 0.01,
+      "volume": 0.0,
+      "trades": 0,
+      "depth_bid_1c": 161.47,
+      "depth_ask_1c": 140.9,
+      "depth_bid_5c": 668.14,
+      "depth_ask_5c": 1025.99,
+      "depth_bid_10c": 969.14,
+      "depth_ask_10c": 1102.99,
+      "depth_bid_15c": 1443.14,
+      "depth_ask_15c": 1300.99,
+      "bids": [
+        {
+          "price": 0.66,
+          "size": 10.0
+        },
+        {
+          "price": 0.65,
+          "size": 151.47
+        },
+        {
+          "price": 0.63,
+          "size": 506.67
+        },
+        {
+          "price": 0.6,
+          "size": 210.0
+        },
+        {
+          "price": 0.57,
+          "size": 81.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.67,
+          "size": 17.9
+        },
+        {
+          "price": 0.68,
+          "size": 123.0
+        },
+        {
+          "price": 0.69,
+          "size": 261.52
+        },
+        {
+          "price": 0.7,
+          "size": 123.57
+        },
+        {
+          "price": 0.71,
+          "size": 500.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:18:14Z",
+      "best_bid_p": 0.66,
+      "best_bid_sz": 10.0,
+      "best_ask_p": 0.67,
+      "best_ask_sz": 17.9,
+      "spread": 0.01,
+      "volume": 0.0,
+      "trades": 0,
+      "depth_bid_1c": 261.47,
+      "depth_ask_1c": 140.9,
+      "depth_bid_5c": 768.14,
+      "depth_ask_5c": 1010.99,
+      "depth_bid_10c": 1159.14,
+      "depth_ask_10c": 1257.99,
+      "depth_bid_15c": 2970.68,
+      "depth_ask_15c": 1355.99,
+      "bids": [
+        {
+          "price": 0.66,
+          "size": 10.0
+        },
+        {
+          "price": 0.65,
+          "size": 251.47
+        },
+        {
+          "price": 0.63,
+          "size": 506.67
+        },
+        {
+          "price": 0.6,
+          "size": 221.0
+        },
+        {
+          "price": 0.59,
+          "size": 10.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.67,
+          "size": 17.9
+        },
+        {
+          "price": 0.68,
+          "size": 123.0
+        },
+        {
+          "price": 0.69,
+          "size": 261.52
+        },
+        {
+          "price": 0.7,
+          "size": 98.57
+        },
+        {
+          "price": 0.71,
+          "size": 510.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:18:19Z",
+      "best_bid_p": 0.66,
+      "best_bid_sz": 10.0,
+      "best_ask_p": 0.67,
+      "best_ask_sz": 1027.9,
+      "spread": 0.01,
+      "volume": 0.0,
+      "trades": 0,
+      "depth_bid_1c": 261.47,
+      "depth_ask_1c": 1420.9,
+      "depth_bid_5c": 498.14,
+      "depth_ask_5c": 2590.99,
+      "depth_bid_10c": 779.14,
+      "depth_ask_10c": 2767.99,
+      "depth_bid_15c": 2700.68,
+      "depth_ask_15c": 2865.99,
+      "bids": [
+        {
+          "price": 0.66,
+          "size": 10.0
+        },
+        {
+          "price": 0.65,
+          "size": 251.47
+        },
+        {
+          "price": 0.64,
+          "size": 30.0
+        },
+        {
+          "price": 0.63,
+          "size": 206.67
+        },
+        {
+          "price": 0.6,
+          "size": 221.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.67,
+          "size": 1027.9
+        },
+        {
+          "price": 0.68,
+          "size": 393.0
+        },
+        {
+          "price": 0.69,
+          "size": 561.52
+        },
+        {
+          "price": 0.7,
+          "size": 108.57
+        },
+        {
+          "price": 0.71,
+          "size": 500.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:18:24Z",
+      "best_bid_p": 0.66,
+      "best_bid_sz": 48.51,
+      "best_ask_p": 0.68,
+      "best_ask_sz": 403.0,
+      "spread": 0.02,
+      "volume": 1.49,
+      "trades": 1,
+      "depth_bid_1c": 299.98,
+      "depth_ask_1c": 966.52,
+      "depth_bid_5c": 806.65,
+      "depth_ask_5c": 1781.09,
+      "depth_bid_10c": 1066.65,
+      "depth_ask_10c": 2037.09,
+      "depth_bid_15c": 2970.19,
+      "depth_ask_15c": 2037.09,
+      "bids": [
+        {
+          "price": 0.66,
+          "size": 48.51
+        },
+        {
+          "price": 0.65,
+          "size": 251.47
+        },
+        {
+          "price": 0.64,
+          "size": 330.0
+        },
+        {
+          "price": 0.63,
+          "size": 176.67
+        },
+        {
+          "price": 0.6,
+          "size": 200.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.68,
+          "size": 403.0
+        },
+        {
+          "price": 0.69,
+          "size": 563.52
+        },
+        {
+          "price": 0.7,
+          "size": 198.57
+        },
+        {
+          "price": 0.71,
+          "size": 616.0
+        },
+        {
+          "price": 0.75,
+          "size": 160.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:18:29Z",
+      "best_bid_p": 0.64,
+      "best_bid_sz": 267.92,
+      "best_ask_p": 0.68,
+      "best_ask_sz": 403.0,
+      "spread": 0.04,
+      "volume": 362.06,
+      "trades": 5,
+      "depth_bid_1c": 444.59,
+      "depth_ask_1c": 964.52,
+      "depth_bid_5c": 654.59,
+      "depth_ask_5c": 1889.09,
+      "depth_bid_10c": 1174.59,
+      "depth_ask_10c": 2045.09,
+      "depth_bid_15c": 2637.13,
+      "depth_ask_15c": 2045.09,
+      "bids": [
+        {
+          "price": 0.64,
+          "size": 267.92
+        },
+        {
+          "price": 0.63,
+          "size": 176.67
+        },
+        {
+          "price": 0.6,
+          "size": 200.0
+        },
+        {
+          "price": 0.59,
+          "size": 10.0
+        },
+        {
+          "price": 0.58,
+          "size": 110.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.68,
+          "size": 403.0
+        },
+        {
+          "price": 0.69,
+          "size": 561.52
+        },
+        {
+          "price": 0.7,
+          "size": 208.57
+        },
+        {
+          "price": 0.71,
+          "size": 716.0
+        },
+        {
+          "price": 0.75,
+          "size": 60.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:18:34Z",
+      "best_bid_p": 0.63,
+      "best_bid_sz": 176.67,
+      "best_ask_p": 0.67,
+      "best_ask_sz": 70.0,
+      "spread": 0.04,
+      "volume": 0.0,
+      "trades": 0,
+      "depth_bid_1c": 176.67,
+      "depth_ask_1c": 488.0,
+      "depth_bid_5c": 547.67,
+      "depth_ask_5c": 1984.09,
+      "depth_bid_10c": 923.67,
+      "depth_ask_10c": 2034.09,
+      "depth_bid_15c": 2380.21,
+      "depth_ask_15c": 2130.09,
+      "bids": [
+        {
+          "price": 0.63,
+          "size": 176.67
+        },
+        {
+          "price": 0.6,
+          "size": 200.0
+        },
+        {
+          "price": 0.59,
+          "size": 161.0
+        },
+        {
+          "price": 0.58,
+          "size": 10.0
+        },
+        {
+          "price": 0.57,
+          "size": 10.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.67,
+          "size": 70.0
+        },
+        {
+          "price": 0.68,
+          "size": 418.0
+        },
+        {
+          "price": 0.69,
+          "size": 371.52
+        },
+        {
+          "price": 0.7,
+          "size": 498.57
+        },
+        {
+          "price": 0.71,
+          "size": 626.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:18:39Z",
+      "best_bid_p": 0.63,
+      "best_bid_sz": 76.67,
+      "best_ask_p": 0.65,
+      "best_ask_sz": 110.0,
+      "spread": 0.02,
+      "volume": 100.0,
+      "trades": 1,
+      "depth_bid_1c": 76.67,
+      "depth_ask_1c": 270.0,
+      "depth_bid_5c": 316.67,
+      "depth_ask_5c": 1773.09,
+      "depth_bid_10c": 682.67,
+      "depth_ask_10c": 2349.09,
+      "depth_bid_15c": 2239.21,
+      "depth_ask_15c": 2385.09,
+      "bids": [
+        {
+          "price": 0.63,
+          "size": 76.67
+        },
+        {
+          "price": 0.6,
+          "size": 200.0
+        },
+        {
+          "price": 0.59,
+          "size": 40.0
+        },
+        {
+          "price": 0.55,
+          "size": 350.0
+        },
+        {
+          "price": 0.54,
+          "size": 10.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.65,
+          "size": 110.0
+        },
+        {
+          "price": 0.66,
+          "size": 160.0
+        },
+        {
+          "price": 0.67,
+          "size": 500.0
+        },
+        {
+          "price": 0.68,
+          "size": 233.0
+        },
+        {
+          "price": 0.69,
+          "size": 271.52
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:18:44Z",
+      "best_bid_p": 0.63,
+      "best_bid_sz": 76.67,
+      "best_ask_p": 0.65,
+      "best_ask_sz": 210.0,
+      "spread": 0.02,
+      "volume": 0.0,
+      "trades": 0,
+      "depth_bid_1c": 76.67,
+      "depth_ask_1c": 380.0,
+      "depth_bid_5c": 584.59,
+      "depth_ask_5c": 1283.09,
+      "depth_bid_10c": 1040.59,
+      "depth_ask_10c": 1859.09,
+      "depth_bid_15c": 2507.13,
+      "depth_ask_15c": 1895.09,
+      "bids": [
+        {
+          "price": 0.63,
+          "size": 76.67
+        },
+        {
+          "price": 0.6,
+          "size": 200.0
+        },
+        {
+          "price": 0.59,
+          "size": 307.92
+        },
+        {
+          "price": 0.55,
+          "size": 450.0
+        },
+        {
+          "price": 0.53,
+          "size": 6.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.65,
+          "size": 210.0
+        },
+        {
+          "price": 0.66,
+          "size": 170.0
+        },
+        {
+          "price": 0.67,
+          "size": 300.0
+        },
+        {
+          "price": 0.68,
+          "size": 233.0
+        },
+        {
+          "price": 0.69,
+          "size": 271.52
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:18:49Z",
+      "best_bid_p": 0.63,
+      "best_bid_sz": 76.67,
+      "best_ask_p": 0.65,
+      "best_ask_sz": 60.0,
+      "spread": 0.02,
+      "volume": 150.0,
+      "trades": 1,
+      "depth_bid_1c": 76.67,
+      "depth_ask_1c": 230.0,
+      "depth_bid_5c": 584.59,
+      "depth_ask_5c": 1433.09,
+      "depth_bid_10c": 1060.59,
+      "depth_ask_10c": 2009.09,
+      "depth_bid_15c": 2537.13,
+      "depth_ask_15c": 2045.09,
+      "bids": [
+        {
+          "price": 0.63,
+          "size": 76.67
+        },
+        {
+          "price": 0.6,
+          "size": 200.0
+        },
+        {
+          "price": 0.59,
+          "size": 307.92
+        },
+        {
+          "price": 0.55,
+          "size": 450.0
+        },
+        {
+          "price": 0.54,
+          "size": 10.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.65,
+          "size": 60.0
+        },
+        {
+          "price": 0.66,
+          "size": 170.0
+        },
+        {
+          "price": 0.67,
+          "size": 600.0
+        },
+        {
+          "price": 0.68,
+          "size": 233.0
+        },
+        {
+          "price": 0.69,
+          "size": 271.52
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:18:54Z",
+      "best_bid_p": 0.66,
+      "best_bid_sz": 170.0,
+      "best_ask_p": 0.67,
+      "best_ask_sz": 310.0,
+      "spread": 0.01,
+      "volume": 330.0,
+      "trades": 1,
+      "depth_bid_1c": 170.0,
+      "depth_ask_1c": 453.0,
+      "depth_bid_5c": 246.67,
+      "depth_ask_5c": 1899.09,
+      "depth_bid_10c": 486.67,
+      "depth_ask_10c": 2049.09,
+      "depth_bid_15c": 2400.21,
+      "depth_ask_15c": 2095.09,
+      "bids": [
+        {
+          "price": 0.66,
+          "size": 170.0
+        },
+        {
+          "price": 0.63,
+          "size": 76.67
+        },
+        {
+          "price": 0.6,
+          "size": 200.0
+        },
+        {
+          "price": 0.59,
+          "size": 40.0
+        },
+        {
+          "price": 0.55,
+          "size": 350.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.67,
+          "size": 310.0
+        },
+        {
+          "price": 0.68,
+          "size": 143.0
+        },
+        {
+          "price": 0.69,
+          "size": 261.52
+        },
+        {
+          "price": 0.7,
+          "size": 608.57
+        },
+        {
+          "price": 0.71,
+          "size": 576.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:18:59Z",
+      "best_bid_p": 0.66,
+      "best_bid_sz": 100.0,
+      "best_ask_p": 0.67,
+      "best_ask_sz": 10.0,
+      "spread": 0.01,
+      "volume": 60.0,
+      "trades": 1,
+      "depth_bid_1c": 100.0,
+      "depth_ask_1c": 153.0,
+      "depth_bid_5c": 176.67,
+      "depth_ask_5c": 1239.09,
+      "depth_bid_10c": 804.59,
+      "depth_ask_10c": 1299.09,
+      "depth_bid_15c": 2628.13,
+      "depth_ask_15c": 1345.09,
+      "bids": [
+        {
+          "price": 0.66,
+          "size": 100.0
+        },
+        {
+          "price": 0.63,
+          "size": 76.67
+        },
+        {
+          "price": 0.6,
+          "size": 467.92
+        },
+        {
+          "price": 0.59,
+          "size": 100.0
+        },
+        {
+          "price": 0.58,
+          "size": 10.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.67,
+          "size": 10.0
+        },
+        {
+          "price": 0.68,
+          "size": 143.0
+        },
+        {
+          "price": 0.69,
+          "size": 271.52
+        },
+        {
+          "price": 0.7,
+          "size": 298.57
+        },
+        {
+          "price": 0.71,
+          "size": 516.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:19:04Z",
+      "best_bid_p": 0.66,
+      "best_bid_sz": 74.94,
+      "best_ask_p": 0.68,
+      "best_ask_sz": 133.0,
+      "spread": 0.02,
+      "volume": 25.06,
+      "trades": 1,
+      "depth_bid_1c": 74.94,
+      "depth_ask_1c": 394.52,
+      "depth_bid_5c": 151.61,
+      "depth_ask_5c": 1019.09,
+      "depth_bid_10c": 689.53,
+      "depth_ask_10c": 1125.09,
+      "depth_bid_15c": 2603.07,
+      "depth_ask_15c": 1235.09,
+      "bids": [
+        {
+          "price": 0.66,
+          "size": 74.94
+        },
+        {
+          "price": 0.63,
+          "size": 76.67
+        },
+        {
+          "price": 0.6,
+          "size": 467.92
+        },
+        {
+          "price": 0.58,
+          "size": 10.0
+        },
+        {
+          "price": 0.57,
+          "size": 50.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.68,
+          "size": 133.0
+        },
+        {
+          "price": 0.69,
+          "size": 261.52
+        },
+        {
+          "price": 0.7,
+          "size": 98.57
+        },
+        {
+          "price": 0.71,
+          "size": 526.0
+        },
+        {
+          "price": 0.75,
+          "size": 60.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:19:09Z",
+      "best_bid_p": 0.66,
+      "best_bid_sz": 74.94,
+      "best_ask_p": 0.68,
+      "best_ask_sz": 133.0,
+      "spread": 0.02,
+      "volume": 0.0,
+      "trades": 0,
+      "depth_bid_1c": 74.94,
+      "depth_ask_1c": 394.52,
+      "depth_bid_5c": 151.61,
+      "depth_ask_5c": 1319.09,
+      "depth_bid_10c": 421.61,
+      "depth_ask_10c": 1425.09,
+      "depth_bid_15c": 2335.15,
+      "depth_ask_15c": 1535.09,
+      "bids": [
+        {
+          "price": 0.66,
+          "size": 74.94
+        },
+        {
+          "price": 0.63,
+          "size": 76.67
+        },
+        {
+          "price": 0.6,
+          "size": 200.0
+        },
+        {
+          "price": 0.58,
+          "size": 10.0
+        },
+        {
+          "price": 0.57,
+          "size": 50.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.68,
+          "size": 133.0
+        },
+        {
+          "price": 0.69,
+          "size": 261.52
+        },
+        {
+          "price": 0.7,
+          "size": 398.57
+        },
+        {
+          "price": 0.71,
+          "size": 526.0
+        },
+        {
+          "price": 0.75,
+          "size": 60.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:19:14Z",
+      "best_bid_p": 0.66,
+      "best_bid_sz": 49.92,
+      "best_ask_p": 0.68,
+      "best_ask_sz": 133.0,
+      "spread": 0.02,
+      "volume": 25.02,
+      "trades": 2,
+      "depth_bid_1c": 49.92,
+      "depth_ask_1c": 394.52,
+      "depth_bid_5c": 126.59,
+      "depth_ask_5c": 1366.09,
+      "depth_bid_10c": 764.51,
+      "depth_ask_10c": 1582.09,
+      "depth_bid_15c": 2578.05,
+      "depth_ask_15c": 1582.09,
+      "bids": [
+        {
+          "price": 0.66,
+          "size": 49.92
+        },
+        {
+          "price": 0.63,
+          "size": 76.67
+        },
+        {
+          "price": 0.6,
+          "size": 467.92
+        },
+        {
+          "price": 0.59,
+          "size": 100.0
+        },
+        {
+          "price": 0.58,
+          "size": 10.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.68,
+          "size": 133.0
+        },
+        {
+          "price": 0.69,
+          "size": 261.52
+        },
+        {
+          "price": 0.7,
+          "size": 398.57
+        },
+        {
+          "price": 0.71,
+          "size": 526.0
+        },
+        {
+          "price": 0.73,
+          "size": 47.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:19:19Z",
+      "best_bid_p": 0.66,
+      "best_bid_sz": 15.43,
+      "best_ask_p": 0.67,
+      "best_ask_sz": 30.0,
+      "spread": 0.01,
+      "volume": 34.481173,
+      "trades": 3,
+      "depth_bid_1c": 15.43,
+      "depth_ask_1c": 163.0,
+      "depth_bid_5c": 392.1,
+      "depth_ask_5c": 1049.09,
+      "depth_bid_10c": 915.02,
+      "depth_ask_10c": 1285.09,
+      "depth_bid_15c": 2718.56,
+      "depth_ask_15c": 1331.09,
+      "bids": [
+        {
+          "price": 0.66,
+          "size": 15.43
+        },
+        {
+          "price": 0.63,
+          "size": 76.67
+        },
+        {
+          "price": 0.61,
+          "size": 300.0
+        },
+        {
+          "price": 0.6,
+          "size": 467.92
+        },
+        {
+          "price": 0.57,
+          "size": 55.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.67,
+          "size": 30.0
+        },
+        {
+          "price": 0.68,
+          "size": 133.0
+        },
+        {
+          "price": 0.69,
+          "size": 261.52
+        },
+        {
+          "price": 0.7,
+          "size": 98.57
+        },
+        {
+          "price": 0.71,
+          "size": 526.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:19:24Z",
+      "best_bid_p": 0.62,
+      "best_bid_sz": 30.0,
+      "best_ask_p": 0.67,
+      "best_ask_sz": 30.0,
+      "spread": 0.05,
+      "volume": 124.0,
+      "trades": 1,
+      "depth_bid_1c": 496.0,
+      "depth_ask_1c": 203.0,
+      "depth_bid_5c": 751.0,
+      "depth_ask_5c": 1385.09,
+      "depth_bid_10c": 1227.0,
+      "depth_ask_10c": 1565.09,
+      "depth_bid_15c": 2707.05,
+      "depth_ask_15c": 1611.09,
+      "bids": [
+        {
+          "price": 0.62,
+          "size": 30.0
+        },
+        {
+          "price": 0.61,
+          "size": 466.0
+        },
+        {
+          "price": 0.6,
+          "size": 200.0
+        },
+        {
+          "price": 0.58,
+          "size": 15.0
+        },
+        {
+          "price": 0.57,
+          "size": 40.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.67,
+          "size": 30.0
+        },
+        {
+          "price": 0.68,
+          "size": 173.0
+        },
+        {
+          "price": 0.69,
+          "size": 561.52
+        },
+        {
+          "price": 0.7,
+          "size": 98.57
+        },
+        {
+          "price": 0.71,
+          "size": 522.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:19:29Z",
+      "best_bid_p": 0.61,
+      "best_bid_sz": 466.0,
+      "best_ask_p": 0.67,
+      "best_ask_sz": 30.0,
+      "spread": 0.06,
+      "volume": 0.0,
+      "trades": 0,
+      "depth_bid_1c": 666.0,
+      "depth_ask_1c": 273.0,
+      "depth_bid_5c": 716.0,
+      "depth_ask_5c": 959.09,
+      "depth_bid_10c": 2589.54,
+      "depth_ask_10c": 1026.09,
+      "depth_bid_15c": 2712.05,
+      "depth_ask_15c": 1162.09,
+      "bids": [
+        {
+          "price": 0.61,
+          "size": 466.0
+        },
+        {
+          "price": 0.6,
+          "size": 200.0
+        },
+        {
+          "price": 0.57,
+          "size": 40.0
+        },
+        {
+          "price": 0.56,
+          "size": 10.0
+        },
+        {
+          "price": 0.55,
+          "size": 410.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.67,
+          "size": 30.0
+        },
+        {
+          "price": 0.68,
+          "size": 243.0
+        },
+        {
+          "price": 0.69,
+          "size": 561.52
+        },
+        {
+          "price": 0.7,
+          "size": 108.57
+        },
+        {
+          "price": 0.71,
+          "size": 16.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:19:34Z",
+      "best_bid_p": 0.61,
+      "best_bid_sz": 30.0,
+      "best_ask_p": 0.67,
+      "best_ask_sz": 60.0,
+      "spread": 0.06,
+      "volume": 74.0,
+      "trades": 1,
+      "depth_bid_1c": 230.0,
+      "depth_ask_1c": 333.0,
+      "depth_bid_5c": 1010.92,
+      "depth_ask_5c": 729.09,
+      "depth_bid_10c": 2834.46,
+      "depth_ask_10c": 799.09,
+      "depth_bid_15c": 2856.97,
+      "depth_ask_15c": 835.09,
+      "bids": [
+        {
+          "price": 0.61,
+          "size": 30.0
+        },
+        {
+          "price": 0.6,
+          "size": 200.0
+        },
+        {
+          "price": 0.58,
+          "size": 348.0
+        },
+        {
+          "price": 0.57,
+          "size": 307.92
+        },
+        {
+          "price": 0.56,
+          "size": 125.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.67,
+          "size": 60.0
+        },
+        {
+          "price": 0.68,
+          "size": 273.0
+        },
+        {
+          "price": 0.69,
+          "size": 261.52
+        },
+        {
+          "price": 0.7,
+          "size": 108.57
+        },
+        {
+          "price": 0.71,
+          "size": 26.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:19:39Z",
+      "best_bid_p": 0.61,
+      "best_bid_sz": 60.0,
+      "best_ask_p": 0.67,
+      "best_ask_sz": 87.0,
+      "spread": 0.06,
+      "volume": 0.0,
+      "trades": 0,
+      "depth_bid_1c": 260.0,
+      "depth_ask_1c": 570.0,
+      "depth_bid_5c": 940.92,
+      "depth_ask_5c": 1064.57,
+      "depth_bid_10c": 2754.46,
+      "depth_ask_10c": 1124.57,
+      "depth_bid_15c": 2776.97,
+      "depth_ask_15c": 1160.57,
+      "bids": [
+        {
+          "price": 0.61,
+          "size": 60.0
+        },
+        {
+          "price": 0.6,
+          "size": 200.0
+        },
+        {
+          "price": 0.58,
+          "size": 348.0
+        },
+        {
+          "price": 0.57,
+          "size": 307.92
+        },
+        {
+          "price": 0.56,
+          "size": 25.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.67,
+          "size": 87.0
+        },
+        {
+          "price": 0.68,
+          "size": 483.0
+        },
+        {
+          "price": 0.69,
+          "size": 380.0
+        },
+        {
+          "price": 0.7,
+          "size": 98.57
+        },
+        {
+          "price": 0.71,
+          "size": 16.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:19:44Z",
+      "best_bid_p": 0.6,
+      "best_bid_sz": 200.0,
+      "best_ask_p": 0.67,
+      "best_ask_sz": 77.0,
+      "spread": 0.07,
+      "volume": 10.0,
+      "trades": 1,
+      "depth_bid_1c": 200.0,
+      "depth_ask_1c": 575.0,
+      "depth_bid_5c": 974.0,
+      "depth_ask_5c": 1109.57,
+      "depth_bid_10c": 2461.54,
+      "depth_ask_10c": 1169.57,
+      "depth_bid_15c": 2525.05,
+      "depth_ask_15c": 1305.57,
+      "bids": [
+        {
+          "price": 0.6,
+          "size": 200.0
+        },
+        {
+          "price": 0.57,
+          "size": 40.0
+        },
+        {
+          "price": 0.56,
+          "size": 384.0
+        },
+        {
+          "price": 0.55,
+          "size": 350.0
+        },
+        {
+          "price": 0.53,
+          "size": 31.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.67,
+          "size": 77.0
+        },
+        {
+          "price": 0.68,
+          "size": 498.0
+        },
+        {
+          "price": 0.69,
+          "size": 320.0
+        },
+        {
+          "price": 0.7,
+          "size": 198.57
+        },
+        {
+          "price": 0.71,
+          "size": 16.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:19:49Z",
+      "best_bid_p": 0.6,
+      "best_bid_sz": 200.0,
+      "best_ask_p": 0.65,
+      "best_ask_sz": 30.0,
+      "spread": 0.05,
+      "volume": 0.0,
+      "trades": 0,
+      "depth_bid_1c": 200.0,
+      "depth_ask_1c": 252.52,
+      "depth_bid_5c": 867.92,
+      "depth_ask_5c": 1026.09,
+      "depth_bid_10c": 2450.46,
+      "depth_ask_10c": 1212.09,
+      "depth_bid_15c": 2513.97,
+      "depth_ask_15c": 1248.09,
+      "bids": [
+        {
+          "price": 0.6,
+          "size": 200.0
+        },
+        {
+          "price": 0.57,
+          "size": 40.0
+        },
+        {
+          "price": 0.55,
+          "size": 627.92
+        },
+        {
+          "price": 0.53,
+          "size": 16.0
+        },
+        {
+          "price": 0.52,
+          "size": 110.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.65,
+          "size": 30.0
+        },
+        {
+          "price": 0.66,
+          "size": 222.52
+        },
+        {
+          "price": 0.67,
+          "size": 57.0
+        },
+        {
+          "price": 0.68,
+          "size": 298.0
+        },
+        {
+          "price": 0.69,
+          "size": 310.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:19:54Z",
+      "best_bid_p": 0.61,
+      "best_bid_sz": 10.0,
+      "best_ask_p": 0.65,
+      "best_ask_sz": 30.0,
+      "spread": 0.04,
+      "volume": 0.0,
+      "trades": 0,
+      "depth_bid_1c": 210.0,
+      "depth_ask_1c": 252.52,
+      "depth_bid_5c": 250.0,
+      "depth_ask_5c": 726.09,
+      "depth_bid_10c": 2369.46,
+      "depth_ask_10c": 822.09,
+      "depth_bid_15c": 2501.97,
+      "depth_ask_15c": 958.09,
+      "bids": [
+        {
+          "price": 0.61,
+          "size": 10.0
+        },
+        {
+          "price": 0.6,
+          "size": 200.0
+        },
+        {
+          "price": 0.57,
+          "size": 40.0
+        },
+        {
+          "price": 0.55,
+          "size": 645.92
+        },
+        {
+          "price": 0.53,
+          "size": 16.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.65,
+          "size": 30.0
+        },
+        {
+          "price": 0.66,
+          "size": 222.52
+        },
+        {
+          "price": 0.67,
+          "size": 57.0
+        },
+        {
+          "price": 0.68,
+          "size": 298.0
+        },
+        {
+          "price": 0.69,
+          "size": 10.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:19:59Z",
+      "best_bid_p": 0.6,
+      "best_bid_sz": 194.0,
+      "best_ask_p": 0.65,
+      "best_ask_sz": 30.0,
+      "spread": 0.05,
+      "volume": 16.0,
+      "trades": 1,
+      "depth_bid_1c": 194.0,
+      "depth_ask_1c": 252.52,
+      "depth_bid_5c": 584.0,
+      "depth_ask_5c": 1040.09,
+      "depth_bid_10c": 2227.54,
+      "depth_ask_10c": 1226.09,
+      "depth_bid_15c": 2291.05,
+      "depth_ask_15c": 1262.09,
+      "bids": [
+        {
+          "price": 0.6,
+          "size": 194.0
+        },
+        {
+          "price": 0.57,
+          "size": 40.0
+        },
+        {
+          "price": 0.55,
+          "size": 350.0
+        },
+        {
+          "price": 0.53,
+          "size": 67.0
+        },
+        {
+          "price": 0.52,
+          "size": 10.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.65,
+          "size": 30.0
+        },
+        {
+          "price": 0.66,
+          "size": 222.52
+        },
+        {
+          "price": 0.67,
+          "size": 357.0
+        },
+        {
+          "price": 0.68,
+          "size": 312.0
+        },
+        {
+          "price": 0.69,
+          "size": 10.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:20:04Z",
+      "best_bid_p": 0.6,
+      "best_bid_sz": 165.0,
+      "best_ask_p": 0.65,
+      "best_ask_sz": 30.0,
+      "spread": 0.05,
+      "volume": 29.0,
+      "trades": 1,
+      "depth_bid_1c": 165.0,
+      "depth_ask_1c": 252.52,
+      "depth_bid_5c": 837.92,
+      "depth_ask_5c": 1030.09,
+      "depth_bid_10c": 2430.46,
+      "depth_ask_10c": 1216.09,
+      "depth_bid_15c": 2503.97,
+      "depth_ask_15c": 1252.09,
+      "bids": [
+        {
+          "price": 0.6,
+          "size": 165.0
+        },
+        {
+          "price": 0.57,
+          "size": 40.0
+        },
+        {
+          "price": 0.55,
+          "size": 632.92
+        },
+        {
+          "price": 0.53,
+          "size": 16.0
+        },
+        {
+          "price": 0.52,
+          "size": 10.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.65,
+          "size": 30.0
+        },
+        {
+          "price": 0.66,
+          "size": 222.52
+        },
+        {
+          "price": 0.67,
+          "size": 357.0
+        },
+        {
+          "price": 0.68,
+          "size": 302.0
+        },
+        {
+          "price": 0.69,
+          "size": 10.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:20:09Z",
+      "best_bid_p": 0.6,
+      "best_bid_sz": 165.0,
+      "best_ask_p": 0.65,
+      "best_ask_sz": 75.0,
+      "spread": 0.05,
+      "volume": 0.0,
+      "trades": 0,
+      "depth_bid_1c": 165.0,
+      "depth_ask_1c": 311.52,
+      "depth_bid_5c": 822.92,
+      "depth_ask_5c": 759.09,
+      "depth_bid_10c": 2303.46,
+      "depth_ask_10c": 935.09,
+      "depth_bid_15c": 2466.97,
+      "depth_ask_15c": 971.09,
+      "bids": [
+        {
+          "price": 0.6,
+          "size": 165.0
+        },
+        {
+          "price": 0.57,
+          "size": 40.0
+        },
+        {
+          "price": 0.55,
+          "size": 617.92
+        },
+        {
+          "price": 0.53,
+          "size": 24.0
+        },
+        {
+          "price": 0.51,
+          "size": 1447.54
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.65,
+          "size": 75.0
+        },
+        {
+          "price": 0.66,
+          "size": 236.52
+        },
+        {
+          "price": 0.67,
+          "size": 27.0
+        },
+        {
+          "price": 0.68,
+          "size": 312.0
+        },
+        {
+          "price": 0.69,
+          "size": 10.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:20:14Z",
+      "best_bid_p": 0.6,
+      "best_bid_sz": 165.0,
+      "best_ask_p": 0.64,
+      "best_ask_sz": 30.0,
+      "spread": 0.04,
+      "volume": 0.0,
+      "trades": 0,
+      "depth_bid_1c": 165.0,
+      "depth_ask_1c": 105.0,
+      "depth_bid_5c": 832.92,
+      "depth_ask_5c": 976.52,
+      "depth_bid_10c": 2405.46,
+      "depth_ask_10c": 1201.09,
+      "depth_bid_15c": 2468.97,
+      "depth_ask_15c": 1287.09,
+      "bids": [
+        {
+          "price": 0.6,
+          "size": 165.0
+        },
+        {
+          "price": 0.57,
+          "size": 40.0
+        },
+        {
+          "price": 0.55,
+          "size": 627.92
+        },
+        {
+          "price": 0.53,
+          "size": 6.0
+        },
+        {
+          "price": 0.52,
+          "size": 110.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.64,
+          "size": 30.0
+        },
+        {
+          "price": 0.65,
+          "size": 75.0
+        },
+        {
+          "price": 0.66,
+          "size": 222.52
+        },
+        {
+          "price": 0.67,
+          "size": 327.0
+        },
+        {
+          "price": 0.68,
+          "size": 312.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:20:19Z",
+      "best_bid_p": 0.6,
+      "best_bid_sz": 165.0,
+      "best_ask_p": 0.64,
+      "best_ask_sz": 30.0,
+      "spread": 0.04,
+      "volume": 0.0,
+      "trades": 0,
+      "depth_bid_1c": 165.0,
+      "depth_ask_1c": 105.0,
+      "depth_bid_5c": 565.0,
+      "depth_ask_5c": 753.52,
+      "depth_bid_10c": 2057.54,
+      "depth_ask_10c": 888.09,
+      "depth_bid_15c": 2221.05,
+      "depth_ask_15c": 1084.09,
+      "bids": [
+        {
+          "price": 0.6,
+          "size": 165.0
+        },
+        {
+          "price": 0.57,
+          "size": 40.0
+        },
+        {
+          "price": 0.55,
+          "size": 360.0
+        },
+        {
+          "price": 0.54,
+          "size": 10.0
+        },
+        {
+          "price": 0.53,
+          "size": 16.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.64,
+          "size": 30.0
+        },
+        {
+          "price": 0.65,
+          "size": 75.0
+        },
+        {
+          "price": 0.66,
+          "size": 222.52
+        },
+        {
+          "price": 0.67,
+          "size": 327.0
+        },
+        {
+          "price": 0.68,
+          "size": 89.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:20:24Z",
+      "best_bid_p": 0.6,
+      "best_bid_sz": 165.0,
+      "best_ask_p": 0.64,
+      "best_ask_sz": 30.0,
+      "spread": 0.04,
+      "volume": 0.0,
+      "trades": 0,
+      "depth_bid_1c": 165.0,
+      "depth_ask_1c": 410.02,
+      "depth_bid_5c": 832.92,
+      "depth_ask_5c": 758.54,
+      "depth_bid_10c": 2447.46,
+      "depth_ask_10c": 973.11,
+      "depth_bid_15c": 2510.97,
+      "depth_ask_15c": 1069.11,
+      "bids": [
+        {
+          "price": 0.6,
+          "size": 165.0
+        },
+        {
+          "price": 0.57,
+          "size": 40.0
+        },
+        {
+          "price": 0.55,
+          "size": 627.92
+        },
+        {
+          "price": 0.54,
+          "size": 142.0
+        },
+        {
+          "price": 0.53,
+          "size": 6.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.64,
+          "size": 30.0
+        },
+        {
+          "price": 0.65,
+          "size": 380.02
+        },
+        {
+          "price": 0.66,
+          "size": 222.52
+        },
+        {
+          "price": 0.67,
+          "size": 27.0
+        },
+        {
+          "price": 0.68,
+          "size": 89.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:20:29Z",
+      "best_bid_p": 0.6,
+      "best_bid_sz": 165.0,
+      "best_ask_p": 0.64,
+      "best_ask_sz": 22.18,
+      "spread": 0.04,
+      "volume": 7.8125,
+      "trades": 1,
+      "depth_bid_1c": 165.0,
+      "depth_ask_1c": 402.2,
+      "depth_bid_5c": 832.92,
+      "depth_ask_5c": 750.72,
+      "depth_bid_10c": 2425.46,
+      "depth_ask_10c": 975.29,
+      "depth_bid_15c": 2488.97,
+      "depth_ask_15c": 1071.29,
+      "bids": [
+        {
+          "price": 0.6,
+          "size": 165.0
+        },
+        {
+          "price": 0.57,
+          "size": 40.0
+        },
+        {
+          "price": 0.55,
+          "size": 627.92
+        },
+        {
+          "price": 0.54,
+          "size": 110.0
+        },
+        {
+          "price": 0.53,
+          "size": 16.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.64,
+          "size": 22.18
+        },
+        {
+          "price": 0.65,
+          "size": 380.02
+        },
+        {
+          "price": 0.66,
+          "size": 222.52
+        },
+        {
+          "price": 0.67,
+          "size": 27.0
+        },
+        {
+          "price": 0.68,
+          "size": 89.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:20:34Z",
+      "best_bid_p": 0.61,
+      "best_bid_sz": 7.81,
+      "best_ask_p": 0.64,
+      "best_ask_sz": 22.18,
+      "spread": 0.03,
+      "volume": 0.0,
+      "trades": 0,
+      "depth_bid_1c": 172.81,
+      "depth_ask_1c": 402.2,
+      "depth_bid_5c": 212.81,
+      "depth_ask_5c": 1049.72,
+      "depth_bid_10c": 2150.35,
+      "depth_ask_10c": 1258.29,
+      "depth_bid_15c": 2179.86,
+      "depth_ask_15c": 1318.29,
+      "bids": [
+        {
+          "price": 0.61,
+          "size": 7.81
+        },
+        {
+          "price": 0.6,
+          "size": 165.0
+        },
+        {
+          "price": 0.57,
+          "size": 40.0
+        },
+        {
+          "price": 0.55,
+          "size": 360.0
+        },
+        {
+          "price": 0.54,
+          "size": 110.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.64,
+          "size": 22.18
+        },
+        {
+          "price": 0.65,
+          "size": 380.02
+        },
+        {
+          "price": 0.66,
+          "size": 522.52
+        },
+        {
+          "price": 0.67,
+          "size": 36.0
+        },
+        {
+          "price": 0.68,
+          "size": 79.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:20:39Z",
+      "best_bid_p": 0.61,
+      "best_bid_sz": 7.81,
+      "best_ask_p": 0.64,
+      "best_ask_sz": 72.18,
+      "spread": 0.03,
+      "volume": 0.0,
+      "trades": 0,
+      "depth_bid_1c": 172.81,
+      "depth_ask_1c": 452.2,
+      "depth_bid_5c": 480.73,
+      "depth_ask_5c": 1109.72,
+      "depth_bid_10c": 2428.27,
+      "depth_ask_10c": 1334.29,
+      "depth_bid_15c": 2457.78,
+      "depth_ask_15c": 1428.29,
+      "bids": [
+        {
+          "price": 0.61,
+          "size": 7.81
+        },
+        {
+          "price": 0.6,
+          "size": 165.0
+        },
+        {
+          "price": 0.57,
+          "size": 307.92
+        },
+        {
+          "price": 0.55,
+          "size": 360.0
+        },
+        {
+          "price": 0.54,
+          "size": 120.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.64,
+          "size": 72.18
+        },
+        {
+          "price": 0.65,
+          "size": 380.02
+        },
+        {
+          "price": 0.66,
+          "size": 522.52
+        },
+        {
+          "price": 0.67,
+          "size": 36.0
+        },
+        {
+          "price": 0.68,
+          "size": 79.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:20:44Z",
+      "best_bid_p": 0.6,
+      "best_bid_sz": 158.92,
+      "best_ask_p": 0.64,
+      "best_ask_sz": 22.18,
+      "spread": 0.04,
+      "volume": 13.89,
+      "trades": 1,
+      "depth_bid_1c": 158.92,
+      "depth_ask_1c": 372.2,
+      "depth_bid_5c": 826.84,
+      "depth_ask_5c": 729.72,
+      "depth_bid_10c": 2464.38,
+      "depth_ask_10c": 954.29,
+      "depth_bid_15c": 2533.89,
+      "depth_ask_15c": 1048.29,
+      "bids": [
+        {
+          "price": 0.6,
+          "size": 158.92
+        },
+        {
+          "price": 0.57,
+          "size": 307.92
+        },
+        {
+          "price": 0.55,
+          "size": 360.0
+        },
+        {
+          "price": 0.54,
+          "size": 110.0
+        },
+        {
+          "price": 0.53,
+          "size": 70.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.64,
+          "size": 22.18
+        },
+        {
+          "price": 0.65,
+          "size": 350.02
+        },
+        {
+          "price": 0.66,
+          "size": 222.52
+        },
+        {
+          "price": 0.67,
+          "size": 36.0
+        },
+        {
+          "price": 0.68,
+          "size": 79.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:20:49Z",
+      "best_bid_p": 0.6,
+      "best_bid_sz": 133.92,
+      "best_ask_p": 0.64,
+      "best_ask_sz": 72.18,
+      "spread": 0.04,
+      "volume": 25.0,
+      "trades": 1,
+      "depth_bid_1c": 133.92,
+      "depth_ask_1c": 422.2,
+      "depth_bid_5c": 533.92,
+      "depth_ask_5c": 1079.72,
+      "depth_bid_10c": 2152.46,
+      "depth_ask_10c": 1304.29,
+      "depth_bid_15c": 2231.97,
+      "depth_ask_15c": 1398.29,
+      "bids": [
+        {
+          "price": 0.6,
+          "size": 133.92
+        },
+        {
+          "price": 0.57,
+          "size": 40.0
+        },
+        {
+          "price": 0.55,
+          "size": 360.0
+        },
+        {
+          "price": 0.54,
+          "size": 10.0
+        },
+        {
+          "price": 0.53,
+          "size": 151.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.64,
+          "size": 72.18
+        },
+        {
+          "price": 0.65,
+          "size": 350.02
+        },
+        {
+          "price": 0.66,
+          "size": 522.52
+        },
+        {
+          "price": 0.67,
+          "size": 36.0
+        },
+        {
+          "price": 0.68,
+          "size": 79.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:20:54Z",
+      "best_bid_p": 0.6,
+      "best_bid_sz": 107.92,
+      "best_ask_p": 0.64,
+      "best_ask_sz": 72.18,
+      "spread": 0.04,
+      "volume": 26.0,
+      "trades": 1,
+      "depth_bid_1c": 107.92,
+      "depth_ask_1c": 422.2,
+      "depth_bid_5c": 497.92,
+      "depth_ask_5c": 1075.72,
+      "depth_bid_10c": 2045.46,
+      "depth_ask_10c": 1300.29,
+      "depth_bid_15c": 2114.97,
+      "depth_ask_15c": 1384.29,
+      "bids": [
+        {
+          "price": 0.6,
+          "size": 107.92
+        },
+        {
+          "price": 0.57,
+          "size": 40.0
+        },
+        {
+          "price": 0.55,
+          "size": 350.0
+        },
+        {
+          "price": 0.53,
+          "size": 100.0
+        },
+        {
+          "price": 0.51,
+          "size": 1447.54
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.64,
+          "size": 72.18
+        },
+        {
+          "price": 0.65,
+          "size": 350.02
+        },
+        {
+          "price": 0.66,
+          "size": 522.52
+        },
+        {
+          "price": 0.67,
+          "size": 46.0
+        },
+        {
+          "price": 0.68,
+          "size": 65.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:20:59Z",
+      "best_bid_p": 0.6,
+      "best_bid_sz": 87.92,
+      "best_ask_p": 0.62,
+      "best_ask_sz": 60.0,
+      "spread": 0.02,
+      "volume": 20.0,
+      "trades": 1,
+      "depth_bid_1c": 87.92,
+      "depth_ask_1c": 760.0,
+      "depth_bid_5c": 745.84,
+      "depth_ask_5c": 1438.54,
+      "depth_bid_10c": 2203.38,
+      "depth_ask_10c": 1603.11,
+      "depth_bid_15c": 2282.89,
+      "depth_ask_15c": 1797.11,
+      "bids": [
+        {
+          "price": 0.6,
+          "size": 87.92
+        },
+        {
+          "price": 0.57,
+          "size": 40.0
+        },
+        {
+          "price": 0.55,
+          "size": 617.92
+        },
+        {
+          "price": 0.52,
+          "size": 10.0
+        },
+        {
+          "price": 0.51,
+          "size": 1447.54
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.62,
+          "size": 60.0
+        },
+        {
+          "price": 0.63,
+          "size": 700.0
+        },
+        {
+          "price": 0.64,
+          "size": 60.0
+        },
+        {
+          "price": 0.65,
+          "size": 350.02
+        },
+        {
+          "price": 0.66,
+          "size": 232.52
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:21:04Z",
+      "best_bid_p": 0.6,
+      "best_bid_sz": 87.92,
+      "best_ask_p": 0.62,
+      "best_ask_sz": 50.0,
+      "spread": 0.02,
+      "volume": 0.0,
+      "trades": 0,
+      "depth_bid_1c": 87.92,
+      "depth_ask_1c": 460.0,
+      "depth_bid_5c": 745.84,
+      "depth_ask_5c": 1638.54,
+      "depth_bid_10c": 2323.38,
+      "depth_ask_10c": 1803.11,
+      "depth_bid_15c": 2392.89,
+      "depth_ask_15c": 1897.11,
+      "bids": [
+        {
+          "price": 0.6,
+          "size": 87.92
+        },
+        {
+          "price": 0.57,
+          "size": 40.0
+        },
+        {
+          "price": 0.55,
+          "size": 617.92
+        },
+        {
+          "price": 0.54,
+          "size": 10.0
+        },
+        {
+          "price": 0.53,
+          "size": 110.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.62,
+          "size": 50.0
+        },
+        {
+          "price": 0.63,
+          "size": 410.0
+        },
+        {
+          "price": 0.64,
+          "size": 460.0
+        },
+        {
+          "price": 0.65,
+          "size": 450.02
+        },
+        {
+          "price": 0.66,
+          "size": 222.52
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:21:09Z",
+      "best_bid_p": 0.57,
+      "best_bid_sz": 40.0,
+      "best_ask_p": 0.63,
+      "best_ask_sz": 50.0,
+      "spread": 0.06,
+      "volume": 0.0,
+      "trades": 0,
+      "depth_bid_1c": 70.0,
+      "depth_ask_1c": 350.0,
+      "depth_bid_5c": 409.0,
+      "depth_ask_5c": 1038.54,
+      "depth_bid_10c": 1976.05,
+      "depth_ask_10c": 1273.11,
+      "depth_bid_15c": 2037.05,
+      "depth_ask_15c": 1357.11,
+      "bids": [
+        {
+          "price": 0.57,
+          "size": 40.0
+        },
+        {
+          "price": 0.56,
+          "size": 30.0
+        },
+        {
+          "price": 0.55,
+          "size": 300.0
+        },
+        {
+          "price": 0.53,
+          "size": 39.0
+        },
+        {
+          "price": 0.51,
+          "size": 1447.54
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.63,
+          "size": 50.0
+        },
+        {
+          "price": 0.64,
+          "size": 300.0
+        },
+        {
+          "price": 0.65,
+          "size": 350.02
+        },
+        {
+          "price": 0.66,
+          "size": 222.52
+        },
+        {
+          "price": 0.67,
+          "size": 36.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:21:14Z",
+      "best_bid_p": 0.57,
+      "best_bid_sz": 40.0,
+      "best_ask_p": 0.64,
+      "best_ask_sz": 30.0,
+      "spread": 0.07,
+      "volume": 0.0,
+      "trades": 0,
+      "depth_bid_1c": 45.0,
+      "depth_ask_1c": 380.02,
+      "depth_bid_5c": 612.92,
+      "depth_ask_5c": 723.54,
+      "depth_bid_10c": 2179.97,
+      "depth_ask_10c": 948.11,
+      "depth_bid_15c": 2240.97,
+      "depth_ask_15c": 1032.11,
+      "bids": [
+        {
+          "price": 0.57,
+          "size": 40.0
+        },
+        {
+          "price": 0.56,
+          "size": 5.0
+        },
+        {
+          "price": 0.55,
+          "size": 567.92
+        },
+        {
+          "price": 0.51,
+          "size": 1547.54
+        },
+        {
+          "price": 0.49,
+          "size": 13.51
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.64,
+          "size": 30.0
+        },
+        {
+          "price": 0.65,
+          "size": 350.02
+        },
+        {
+          "price": 0.66,
+          "size": 222.52
+        },
+        {
+          "price": 0.67,
+          "size": 46.0
+        },
+        {
+          "price": 0.68,
+          "size": 65.0
+        }
+      ]
+    },
+    {
+      "ts": "2026-02-06 06:21:19Z",
+      "best_bid_p": 0.57,
+      "best_bid_sz": 40.0,
+      "best_ask_p": 0.64,
+      "best_ask_sz": 30.0,
+      "spread": 0.07,
+      "volume": 44.2,
+      "trades": 1,
+      "depth_bid_1c": 40.0,
+      "depth_ask_1c": 365.82,
+      "depth_bid_5c": 607.92,
+      "depth_ask_5c": 809.34,
+      "depth_bid_10c": 2074.97,
+      "depth_ask_10c": 933.91,
+      "depth_bid_15c": 2135.97,
+      "depth_ask_15c": 1027.91,
+      "bids": [
+        {
+          "price": 0.57,
+          "size": 40.0
+        },
+        {
+          "price": 0.55,
+          "size": 567.92
+        },
+        {
+          "price": 0.51,
+          "size": 1447.54
+        },
+        {
+          "price": 0.49,
+          "size": 13.51
+        },
+        {
+          "price": 0.48,
+          "size": 6.0
+        }
+      ],
+      "asks": [
+        {
+          "price": 0.64,
+          "size": 30.0
+        },
+        {
+          "price": 0.65,
+          "size": 335.82
+        },
+        {
+          "price": 0.66,
+          "size": 222.52
+        },
+        {
+          "price": 0.67,
+          "size": 36.0
+        },
+        {
+          "price": 0.68,
+          "size": 65.0
+        }
+      ]
+    }
+  ]
+}
