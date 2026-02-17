@@ -1,22 +1,14 @@
-#!/usr/bin/env python3
 """
-Polymarket 1-second Order Book & Volume Recorder.
+Polymarket Order Book & Volume Recorder.
 
 Hybrid approach:
-  - WebSocket (market channel) captures every last_trade_price event for volume tracking.
-  - REST GET /book polls the full order book once per second.
-  - Data is aggregated per second and written to SQLite.
-
-Output structure:
-  data/
-    {market_slug}_{YYYYMMDDTHHmmss}/
-      notes.md          <- market metadata, outcomes, recording window
-      ob_data.db        <- SQLite with two tables
+  - WebSocket (market channel) captures last_trade_price events for volume tracking.
+  - REST GET /book polls the full order book at a configurable interval.
+  - Data is aggregated per interval and written to SQLite.
 """
 
 import json
 import os
-import re
 import threading
 import time
 import logging
@@ -36,65 +28,123 @@ logging.basicConfig(
 log = logging.getLogger(__name__)
 
 
-# ── Market metadata ──────────────────────────────────────────────────────────
+# ── Thread-safe trade buffer ─────────────────────────────────────────────────
 
-def fetch_market_meta() -> dict:
-    url = f"{config.GAMMA_API_URL}/markets"
+trade_lock = threading.Lock()
+trade_buffer: list = []
+
+
+def flush_trades():
+    global trade_buffer
+    with trade_lock:
+        buf = trade_buffer
+        trade_buffer = []
+    volume = sum(float(t.get("size", 0)) for t in buf)
+    return volume, len(buf)
+
+
+# ── WebSocket ────────────────────────────────────────────────────────────────
+
+def _on_message(ws, message):
+    if message == "PONG":
+        return
     try:
-        resp = requests.get(url, params={"clob_token_ids": config.TOKEN_ID_YES}, timeout=10)
+        data = json.loads(message)
+    except json.JSONDecodeError:
+        return
+    events = data if isinstance(data, list) else [data]
+    for evt in events:
+        if evt.get("event_type") == "last_trade_price":
+            with trade_lock:
+                trade_buffer.append(evt)
+
+
+def _on_error(ws, error):
+    log.warning("WSS error: %s", error)
+
+
+def _on_close(ws, status_code, msg):
+    log.info("WSS closed (code=%s msg=%s)", status_code, msg)
+
+
+def _ping_loop(ws):
+    while True:
+        try:
+            ws.send("PING")
+        except Exception:
+            break
+        time.sleep(10)
+
+
+def start_websocket(token_id_yes, token_id_no):
+    def on_open(ws):
+        ws.send(json.dumps({"assets_ids": [token_id_yes, token_id_no], "type": "market"}))
+        log.info("WSS subscribed to 2 asset_ids")
+
+    url = config.CLOB_WSS_URL + "/ws/market"
+    ws = WebSocketApp(url, on_message=_on_message, on_error=_on_error,
+                      on_close=_on_close, on_open=on_open)
+    threading.Thread(target=ws.run_forever, daemon=True).start()
+    threading.Thread(target=_ping_loop, args=(ws,), daemon=True).start()
+    return ws
+
+
+# ── REST ─────────────────────────────────────────────────────────────────────
+
+def fetch_book(token_id: str):
+    try:
+        resp = requests.get(f"{config.CLOB_REST_URL}/book",
+                            params={"token_id": token_id}, timeout=5)
         resp.raise_for_status()
-        markets = resp.json()
-        if markets and len(markets) > 0:
-            return markets[0]
+        return resp.json()
     except Exception as e:
-        log.warning("Failed to fetch market metadata: %s", e)
-    return {}
+        log.warning("REST /book failed: %s", e)
+        return None
 
 
-def slugify(text: str) -> str:
-    text = text.lower().strip()
-    text = re.sub(r"[^a-z0-9]+", "-", text)
-    return text.strip("-")
+# ── Parsing helpers ──────────────────────────────────────────────────────────
+
+def parse_levels(raw, side, top_n=5):
+    parsed = [(float(x["price"]), float(x["size"])) for x in raw]
+    if side == "bid":
+        parsed.sort(key=lambda x: x[0], reverse=True)
+    else:
+        parsed.sort(key=lambda x: x[0])
+    return [{"price": p, "size": s} for p, s in parsed[:top_n]]
 
 
-def build_session_dir(start_utc: datetime) -> str:
-    ts_tag = start_utc.strftime("%Y%m%dT%H%M%S")
-    folder_name = f"{config.EVENT_SLUG}_{ts_tag}"
-    session_dir = os.path.join(config.DATA_ROOT, folder_name)
-    os.makedirs(session_dir, exist_ok=True)
-    return session_dir
+def compute_depth(levels_raw, best, side, cents):
+    delta = cents / 100.0
+    total = 0.0
+    for lv in levels_raw:
+        p, s = float(lv["price"]), float(lv["size"])
+        if side == "bid" and p >= best - delta:
+            total += s
+        elif side == "ask" and p <= best + delta:
+            total += s
+    return total
 
 
-def write_notes(session_dir: str, meta: dict, start_utc: datetime, end_utc: datetime, duration: int):
+# ── Notes ────────────────────────────────────────────────────────────────────
+
+def _parse_json_field(raw):
+    if isinstance(raw, list):
+        return raw
+    if isinstance(raw, str):
+        try:
+            return json.loads(raw)
+        except (json.JSONDecodeError, TypeError):
+            return [raw] if raw else []
+    return []
+
+
+def write_notes(session_dir, meta, params, start_utc, end_utc, duration):
     question = meta.get("question", "N/A")
     slug = meta.get("slug", "N/A")
-    condition_id = meta.get("conditionId", config.CONDITION_ID)
-    outcomes_raw = meta.get("outcomes", "[]")
-    if isinstance(outcomes_raw, str):
-        try:
-            outcomes = json.loads(outcomes_raw)
-        except json.JSONDecodeError:
-            outcomes = [outcomes_raw]
-    else:
-        outcomes = outcomes_raw
-    outcome_prices_raw = meta.get("outcomePrices", "[]")
-    if isinstance(outcome_prices_raw, str):
-        try:
-            outcome_prices = json.loads(outcome_prices_raw)
-        except json.JSONDecodeError:
-            outcome_prices = []
-    else:
-        outcome_prices = outcome_prices_raw
-
-    token_ids_raw = meta.get("clobTokenIds", "[]")
-    if isinstance(token_ids_raw, str):
-        try:
-            token_ids = json.loads(token_ids_raw)
-        except json.JSONDecodeError:
-            token_ids = []
-    else:
-        token_ids = token_ids_raw
-
+    condition_id = meta.get("conditionId", params["market_id"])
+    outcomes = _parse_json_field(meta.get("outcomes", "[]"))
+    outcome_prices = _parse_json_field(meta.get("outcomePrices", "[]"))
+    token_ids = _parse_json_field(meta.get("clobTokenIds", "[]"))
     description = meta.get("description", "")
     game_start = meta.get("gameStartTime", meta.get("endDate", "N/A"))
     volume_total = meta.get("volumeNum", meta.get("volume", "N/A"))
@@ -127,7 +177,7 @@ def write_notes(session_dir: str, meta: dict, start_utc: datetime, end_utc: date
 - **Start (UTC)**: {start_utc.strftime("%Y-%m-%d %H:%M:%S")}
 - **End (UTC)**: {end_utc.strftime("%Y-%m-%d %H:%M:%S")}
 - **Duration**: {duration} seconds ({duration // 60}m {duration % 60}s)
-- **Sampling**: {config.POLL_INTERVAL}s interval
+- **Sampling**: {params['interval']}s interval
 
 ## Description
 {description}
@@ -135,7 +185,7 @@ def write_notes(session_dir: str, meta: dict, start_utc: datetime, end_utc: date
 ## Files
 - `ob_data.db` — SQLite database
   - Table `pm_sports_market_1s`: per-second L1 + volume + spread + depth
-  - Table `pm_sports_orderbook_top5_1s`: per-second Top5 bid/ask levels
+  - Table `pm_sports_orderbook_top5_1s`: per-second Top-{params['top_levels']} bid/ask levels
 """
     path = os.path.join(session_dir, "notes.md")
     with open(path, "w") as f:
@@ -143,138 +193,77 @@ def write_notes(session_dir: str, meta: dict, start_utc: datetime, end_utc: date
     log.info("Notes written to %s", path)
 
 
-# ── Thread-safe trade buffer ─────────────────────────────────────────────────
+# ── Validation ───────────────────────────────────────────────────────────────
 
-trade_lock = threading.Lock()
-trade_buffer: list[dict] = []
+def validate(conn):
+    log.info("── Validation ──")
+    cur = conn.execute("SELECT COUNT(*) FROM pm_sports_market_1s")
+    count_a = cur.fetchone()[0]
+    cur = conn.execute("SELECT MIN(ts_utc), MAX(ts_utc) FROM pm_sports_market_1s")
+    ts_min, ts_max = cur.fetchone()
+    log.info("Table A: %d rows, range [%s .. %s]", count_a, ts_min, ts_max)
 
+    cur = conn.execute("SELECT COUNT(*) FROM pm_sports_orderbook_top5_1s")
+    log.info("Table B: %d rows", cur.fetchone()[0])
 
-def flush_trades():
-    global trade_buffer
-    with trade_lock:
-        buf = trade_buffer
-        trade_buffer = []
-    volume = sum(float(t.get("size", 0)) for t in buf)
-    return volume, len(buf)
-
-
-# ── WebSocket: listen for last_trade_price events ────────────────────────────
-
-def _on_message(ws, message):
-    if message == "PONG":
-        return
-    try:
-        data = json.loads(message)
-    except json.JSONDecodeError:
-        return
-    events = data if isinstance(data, list) else [data]
-    for evt in events:
-        if evt.get("event_type") == "last_trade_price":
-            with trade_lock:
-                trade_buffer.append(evt)
-
-
-def _on_error(ws, error):
-    log.warning("WSS error: %s", error)
-
-
-def _on_close(ws, status_code, msg):
-    log.info("WSS closed (code=%s msg=%s)", status_code, msg)
-
-
-def _on_open(ws):
-    asset_ids = [config.TOKEN_ID_YES, config.TOKEN_ID_NO]
-    ws.send(json.dumps({"assets_ids": asset_ids, "type": "market"}))
-    log.info("WSS subscribed to %d asset_ids", len(asset_ids))
-
-
-def _ping_loop(ws):
-    while True:
-        try:
-            ws.send("PING")
-        except Exception:
-            break
-        time.sleep(10)
-
-
-def start_websocket():
-    url = config.CLOB_WSS_URL + "/ws/market"
-    ws = WebSocketApp(
-        url,
-        on_message=_on_message,
-        on_error=_on_error,
-        on_close=_on_close,
-        on_open=_on_open,
-    )
-    t = threading.Thread(target=ws.run_forever, daemon=True)
-    t.start()
-    ping_t = threading.Thread(target=_ping_loop, args=(ws,), daemon=True)
-    ping_t.start()
-    return ws
-
-
-# ── REST: fetch order book snapshot ──────────────────────────────────────────
-
-def fetch_book(token_id: str):
-    url = f"{config.CLOB_REST_URL}/book"
-    try:
-        resp = requests.get(url, params={"token_id": token_id}, timeout=5)
-        resp.raise_for_status()
-        return resp.json()
-    except Exception as e:
-        log.warning("REST /book failed: %s", e)
-        return None
-
-
-# ── Order book parsing helpers ───────────────────────────────────────────────
-
-def parse_levels(raw, side, top_n=5):
-    parsed = [(float(x["price"]), float(x["size"])) for x in raw]
-    if side == "bid":
-        parsed.sort(key=lambda x: x[0], reverse=True)
+    neg = conn.execute("SELECT COUNT(*) FROM pm_sports_market_1s WHERE volume_1s < 0").fetchone()[0]
+    if neg:
+        log.warning("Found %d rows with negative volume_1s!", neg)
     else:
-        parsed.sort(key=lambda x: x[0])
-    return [{"price": p, "size": s} for p, s in parsed[:top_n]]
+        log.info("No negative volume_1s values.")
 
-
-def compute_depth(levels_raw, best, side, cents):
-    delta = cents / 100.0
-    total = 0.0
-    for lv in levels_raw:
-        p = float(lv["price"])
-        s = float(lv["size"])
-        if side == "bid" and p >= best - delta:
-            total += s
-        elif side == "ask" and p <= best + delta:
-            total += s
-    return total
+    for side_col, side_name in [("best_bid_p", "bid"), ("best_ask_p", "ask")]:
+        mis = conn.execute(f"""
+            SELECT COUNT(*) FROM pm_sports_market_1s a
+            JOIN pm_sports_orderbook_top5_1s b
+              ON a.market_id = b.market_id AND a.ts_utc = b.ts_utc
+            WHERE b.side = '{side_name}' AND b.level = 1
+              AND a.{side_col} IS NOT NULL AND b.price IS NOT NULL
+              AND ABS(a.{side_col} - b.price) > 0.0001
+        """).fetchone()[0]
+        if mis:
+            log.warning("L1 %s mismatch: %d rows", side_name, mis)
+        else:
+            log.info("L1 %s consistency check passed.", side_name)
 
 
 # ── Main recording loop ─────────────────────────────────────────────────────
 
-def record():
+def record(params: dict):
+    """
+    params keys:
+      slug, condition_id, market_id, token_id_yes, token_id_no, meta,
+      duration, interval, top_levels, output_dir
+    """
+    slug = params["slug"]
+    market_id = params["market_id"]
+    token_yes = params["token_id_yes"]
+    token_no = params["token_id_no"]
+    meta = params["meta"]
+    duration = params["duration"]
+    interval = params["interval"]
+    top_levels = params["top_levels"]
+    output_dir = params["output_dir"]
+    depth_cents = config.DEPTH_CENTS
+
     start_utc = datetime.now(timezone.utc)
-    duration = config.RECORD_DURATION_SECONDS
+    question = meta.get("question", market_id)
+    log.info("Market: %s", question)
 
-    log.info("Fetching market metadata...")
-    meta = fetch_market_meta()
-    market_question = meta.get("question", config.CONDITION_ID)
-    log.info("Market: %s", market_question)
-
-    session_dir = build_session_dir(start_utc)
+    ts_tag = start_utc.strftime("%Y%m%dT%H%M%S")
+    session_dir = os.path.join(output_dir, f"{slug}_{ts_tag}")
+    os.makedirs(session_dir, exist_ok=True)
     db_path = os.path.join(session_dir, "ob_data.db")
     log.info("Session dir: %s", session_dir)
 
     conn = get_conn(db_path)
     init_tables(conn)
 
-    ws = start_websocket()
+    ws = start_websocket(token_yes, token_no)
     time.sleep(2)
 
-    interval = config.POLL_INTERVAL
     total_ticks = int(duration / interval)
-    log.info("Recording %d seconds (%d snapshots at %.0fs interval)...",
-             duration, total_ticks, interval)
+    log.info("Recording %ds (%d snapshots at %.1fs interval)...", duration, total_ticks, interval)
 
     start = time.time()
     tick = 0
@@ -290,75 +279,95 @@ def record():
             ts_utc = now_utc.strftime("%Y-%m-%d %H:%M:%SZ")
             ingest_ts = now_utc.strftime("%Y-%m-%d %H:%M:%S.%fZ")
 
-            book = fetch_book(config.TOKEN_ID_YES)
+            book_yes = fetch_book(token_yes)
+            book_no = fetch_book(token_no)
             volume_1s, trades_1s = flush_trades()
 
+            # --- Parse YES book ---
             best_bid_p = best_bid_sz = best_ask_p = best_ask_sz = None
             spread = None
-            depths = {f"depth_{side}_{c}c": 0.0 for side in ("bid", "ask") for c in config.DEPTH_CENTS}
+            depths = {f"depth_{s}_{c}c": 0.0 for s in ("bid", "ask") for c in depth_cents}
             ob_rows = []
 
-            if book:
-                bids_raw = book.get("bids") or []
-                asks_raw = book.get("asks") or []
-
-                top_bids = parse_levels(bids_raw, "bid", config.TOP_LEVELS)
-                top_asks = parse_levels(asks_raw, "ask", config.TOP_LEVELS)
+            if book_yes:
+                bids_raw = book_yes.get("bids") or []
+                asks_raw = book_yes.get("asks") or []
+                top_bids = parse_levels(bids_raw, "bid", top_levels)
+                top_asks = parse_levels(asks_raw, "ask", top_levels)
 
                 if top_bids:
-                    best_bid_p = top_bids[0]["price"]
-                    best_bid_sz = top_bids[0]["size"]
+                    best_bid_p, best_bid_sz = top_bids[0]["price"], top_bids[0]["size"]
                 if top_asks:
-                    best_ask_p = top_asks[0]["price"]
-                    best_ask_sz = top_asks[0]["size"]
-
+                    best_ask_p, best_ask_sz = top_asks[0]["price"], top_asks[0]["size"]
                 if best_bid_p is not None and best_ask_p is not None:
                     spread = round(best_ask_p - best_bid_p, 4)
 
-                for c in config.DEPTH_CENTS:
+                for c in depth_cents:
                     if best_bid_p is not None:
                         depths[f"depth_bid_{c}c"] = round(compute_depth(bids_raw, best_bid_p, "bid", c), 6)
                     if best_ask_p is not None:
                         depths[f"depth_ask_{c}c"] = round(compute_depth(asks_raw, best_ask_p, "ask", c), 6)
 
-                for i, lv in enumerate(top_bids, start=1):
-                    ob_rows.append(dict(ts_utc=ts_utc, market_id=config.MARKET_ID,
-                                        side="bid", level=i,
-                                        price=lv["price"], size=lv["size"],
-                                        ingest_ts_utc=ingest_ts))
-                for i, lv in enumerate(top_asks, start=1):
-                    ob_rows.append(dict(ts_utc=ts_utc, market_id=config.MARKET_ID,
-                                        side="ask", level=i,
-                                        price=lv["price"], size=lv["size"],
-                                        ingest_ts_utc=ingest_ts))
+                for side_name, top_list in [("bid", top_bids), ("ask", top_asks)]:
+                    for i, lv in enumerate(top_list, 1):
+                        ob_rows.append(dict(ts_utc=ts_utc, market_id=market_id,
+                                            token_side="yes", side=side_name, level=i,
+                                            price=lv["price"], size=lv["size"],
+                                            ingest_ts_utc=ingest_ts))
+                    for i in range(len(top_list) + 1, top_levels + 1):
+                        ob_rows.append(dict(ts_utc=ts_utc, market_id=market_id,
+                                            token_side="yes", side=side_name, level=i,
+                                            price=None, size=None,
+                                            ingest_ts_utc=ingest_ts))
 
-                for side, top, total_levels in [("bid", top_bids, config.TOP_LEVELS),
-                                                 ("ask", top_asks, config.TOP_LEVELS)]:
-                    for i in range(len(top) + 1, total_levels + 1):
-                        ob_rows.append(dict(ts_utc=ts_utc, market_id=config.MARKET_ID,
-                                            side=side, level=i,
+            # --- Parse NO book ---
+            best_bid_p_no = best_bid_sz_no = best_ask_p_no = best_ask_sz_no = None
+            spread_no = None
+            depths_no = {f"depth_{s}_{c}c_no": 0.0 for s in ("bid", "ask") for c in depth_cents}
+
+            if book_no:
+                bids_raw_no = book_no.get("bids") or []
+                asks_raw_no = book_no.get("asks") or []
+                top_bids_no = parse_levels(bids_raw_no, "bid", top_levels)
+                top_asks_no = parse_levels(asks_raw_no, "ask", top_levels)
+
+                if top_bids_no:
+                    best_bid_p_no, best_bid_sz_no = top_bids_no[0]["price"], top_bids_no[0]["size"]
+                if top_asks_no:
+                    best_ask_p_no, best_ask_sz_no = top_asks_no[0]["price"], top_asks_no[0]["size"]
+                if best_bid_p_no is not None and best_ask_p_no is not None:
+                    spread_no = round(best_ask_p_no - best_bid_p_no, 4)
+
+                for c in depth_cents:
+                    if best_bid_p_no is not None:
+                        depths_no[f"depth_bid_{c}c_no"] = round(compute_depth(bids_raw_no, best_bid_p_no, "bid", c), 6)
+                    if best_ask_p_no is not None:
+                        depths_no[f"depth_ask_{c}c_no"] = round(compute_depth(asks_raw_no, best_ask_p_no, "ask", c), 6)
+
+                for side_name, top_list in [("bid", top_bids_no), ("ask", top_asks_no)]:
+                    for i, lv in enumerate(top_list, 1):
+                        ob_rows.append(dict(ts_utc=ts_utc, market_id=market_id,
+                                            token_side="no", side=side_name, level=i,
+                                            price=lv["price"], size=lv["size"],
+                                            ingest_ts_utc=ingest_ts))
+                    for i in range(len(top_list) + 1, top_levels + 1):
+                        ob_rows.append(dict(ts_utc=ts_utc, market_id=market_id,
+                                            token_side="no", side=side_name, level=i,
                                             price=None, size=None,
                                             ingest_ts_utc=ingest_ts))
 
             market_row = dict(
-                ts_utc=ts_utc,
-                market_id=config.MARKET_ID,
-                volume_1s=round(volume_1s, 6),
-                trades_1s=trades_1s,
-                best_bid_p=best_bid_p,
-                best_bid_sz=best_bid_sz,
-                best_ask_p=best_ask_p,
-                best_ask_sz=best_ask_sz,
-                depth_bid_1c=depths["depth_bid_1c"],
-                depth_ask_1c=depths["depth_ask_1c"],
-                depth_bid_5c=depths["depth_bid_5c"],
-                depth_ask_5c=depths["depth_ask_5c"],
-                depth_bid_10c=depths["depth_bid_10c"],
-                depth_ask_10c=depths["depth_ask_10c"],
-                depth_bid_15c=depths["depth_bid_15c"],
-                depth_ask_15c=depths["depth_ask_15c"],
+                ts_utc=ts_utc, market_id=market_id,
+                volume_1s=round(volume_1s, 6), trades_1s=trades_1s,
+                best_bid_p=best_bid_p, best_bid_sz=best_bid_sz,
+                best_ask_p=best_ask_p, best_ask_sz=best_ask_sz,
                 spread=spread,
+                best_bid_p_no=best_bid_p_no, best_bid_sz_no=best_bid_sz_no,
+                best_ask_p_no=best_ask_p_no, best_ask_sz_no=best_ask_sz_no,
+                spread_no=spread_no,
                 ingest_ts_utc=ingest_ts,
+                **{k: v for k, v in depths.items()},
+                **{k: v for k, v in depths_no.items()},
             )
 
             insert_market_1s(conn, market_row)
@@ -367,11 +376,10 @@ def record():
             conn.commit()
 
             tick += 1
-            if tick % 12 == 0:
+            if tick % max(1, int(60 / interval)) == 0:
                 elapsed = tick * interval
                 log.info("Progress: %d/%d snapshots (%.0fs / %.0fs, %.0f%%)",
-                         tick, total_ticks, elapsed, duration,
-                         tick / total_ticks * 100)
+                         tick, total_ticks, elapsed, duration, tick / total_ticks * 100)
 
     except KeyboardInterrupt:
         log.info("Interrupted by user after %d snapshots", tick)
@@ -379,62 +387,9 @@ def record():
         ws.close()
         end_utc = datetime.now(timezone.utc)
         actual_seconds = int((end_utc - start_utc).total_seconds())
-        write_notes(session_dir, meta, start_utc, end_utc, actual_seconds)
+        write_notes(session_dir, meta, params, start_utc, end_utc, actual_seconds)
         validate(conn)
         conn.close()
         log.info("Done. %d snapshots recorded to %s", tick, session_dir)
 
-
-# ── Post-recording validation ────────────────────────────────────────────────
-
-def validate(conn):
-    log.info("── Validation ──")
-
-    cur = conn.execute("SELECT COUNT(*) FROM pm_sports_market_1s")
-    count_a = cur.fetchone()[0]
-    cur = conn.execute("SELECT MIN(ts_utc), MAX(ts_utc) FROM pm_sports_market_1s")
-    ts_min, ts_max = cur.fetchone()
-    log.info("Table A: %d rows, range [%s .. %s]", count_a, ts_min, ts_max)
-
-    cur = conn.execute("SELECT COUNT(*) FROM pm_sports_orderbook_top5_1s")
-    count_b = cur.fetchone()[0]
-    log.info("Table B: %d rows", count_b)
-
-    cur = conn.execute("SELECT COUNT(*) FROM pm_sports_market_1s WHERE volume_1s < 0")
-    neg = cur.fetchone()[0]
-    if neg > 0:
-        log.warning("Found %d rows with negative volume_1s!", neg)
-    else:
-        log.info("No negative volume_1s values.")
-
-    cur = conn.execute("""
-        SELECT COUNT(*) FROM pm_sports_market_1s a
-        JOIN pm_sports_orderbook_top5_1s b
-          ON a.market_id = b.market_id AND a.ts_utc = b.ts_utc
-        WHERE b.side = 'bid' AND b.level = 1
-          AND (a.best_bid_p IS NOT NULL AND b.price IS NOT NULL)
-          AND ABS(a.best_bid_p - b.price) > 0.0001
-    """)
-    mismatch = cur.fetchone()[0]
-    if mismatch > 0:
-        log.warning("L1 bid mismatch between Table A and B: %d rows", mismatch)
-    else:
-        log.info("L1 bid consistency check passed.")
-
-    cur = conn.execute("""
-        SELECT COUNT(*) FROM pm_sports_market_1s a
-        JOIN pm_sports_orderbook_top5_1s b
-          ON a.market_id = b.market_id AND a.ts_utc = b.ts_utc
-        WHERE b.side = 'ask' AND b.level = 1
-          AND (a.best_ask_p IS NOT NULL AND b.price IS NOT NULL)
-          AND ABS(a.best_ask_p - b.price) > 0.0001
-    """)
-    mismatch = cur.fetchone()[0]
-    if mismatch > 0:
-        log.warning("L1 ask mismatch between Table A and B: %d rows", mismatch)
-    else:
-        log.info("L1 ask consistency check passed.")
-
-
-if __name__ == "__main__":
-    record()
+    return session_dir
