@@ -2,6 +2,8 @@
 
 对 [Polymarket](https://polymarket.com) 预测市场进行多粒度订单簿（Order Book）采集——从 5 秒低频到 ~150 次/秒高频——数据落库 SQLite，支持导出 `replay.json` 并在浏览器中回放动画。
 
+![Player 盘口回放截图](docs/player-screenshot.png)
+
 ---
 
 ## 目录
